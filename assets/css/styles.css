@@ -691,7 +691,7 @@ header.fixed {
 .logo {
     position: absolute;
     top: 20px;
-    width: 140px;
+    width: 360px;
     height: auto;
 }
 
@@ -813,7 +813,7 @@ html[lang="en"] a.en {
 
 .fixed .logo {
     top: 15px;
-    width: 86px;
+    width: 220px;
 }
 
 .fixed .side-name {
@@ -5399,7 +5399,7 @@ body[data-page="thanh-xuan-valley"] .container {
     }
 
     .navigation {
-        padding-left: 160px;
+        padding-left: 220px;
         flex-grow: 1;
     }
 
