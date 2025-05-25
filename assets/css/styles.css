@@ -494,7 +494,7 @@ h5 {
 .section-inr {
     position: relative;
     width: 100%;
-    height: auto;
+    height: 100vh;
 }
 
 .pic {
@@ -5399,7 +5399,7 @@ body[data-page="thanh-xuan-valley"] .container {
     }
 
     .navigation {
-        padding-left: 220px;
+        padding-left: 260px;
         flex-grow: 1;
     }
 
