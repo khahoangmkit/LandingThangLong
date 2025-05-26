@@ -1,4 +1,4 @@
-﻿.pswp {
+.pswp {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
@@ -286,6 +286,19 @@
          width:auto;
     }
 
+.banner-pic {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+}
+.banner-pic img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+}
+
 .banner-pic-custom::before {
     content: '';
     position: absolute;
@@ -406,161 +419,6 @@ html {
     /*margin-left:25px;*/
 }
 
-.journeys-slider .swiper-slide {
-    background-color: #FAFAFA;
-}
-
-.library-brief{
-    width:100%;
-}
-
-/*.trang-chu .nature-info {
-    padding-left : 5%;
-}*/
-
-.the-story .parkzone-natural 
-{
-    padding-top:0px;
-}
-
-.gallery-page .brief-right 
-{
-    padding-left:5%;
-}
-
-.gallery-page .info-number
-{
-   /* float:right;
-    padding-right:5%;
-    width:50%;*/
-}
-
-ul.ul-circle {
-    list-style: circle;
-    padding-left: 30px;
-    color: #515151;
-    padding-top: 10px;
-    font-size:1rem;
-}
-
-     ul.ul-circle li {
-        line-height: 30px;
-    }
-
-.song-cung-thanh-xuan .journeys-brief {
-    position: relative;
-    display: block;
-    width: 100%;
-    padding: 10px 35px 10px 10px;
-}
-
-.gallery-page .disconnect-custom
-{
-    padding-left:0px;
-}
-
-.thanhxuan-convenient{
-    padding-top:0px;
-}
-.the-story .thanhxuan-convenient-inr h2 {
-    margin-bottom: 0px;
-}
-
-.pd-top-bottom-80-50 {
-    padding-top: 80px;
-    padding-bottom: 50px;
-}
-
-.pd-top-bottom-50 {
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-.pd-top-50 {
-    padding-top: 50px;
-}
-.pd-bottom-50 {
-    padding-bottom: 50px;
-}
-.video-bimgroup {
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-
-/*h3{
-    padding-bottom:15px;
-}
-*/
-
-h2{
-    padding-top:60px;
-    padding-bottom:40px;
-    margin-bottom:0px;
-    margin-top:0px;
-}
-
-h3 {
-    padding-top: 32px;
-    padding-bottom: 32px;
-}
-
-h4 {
-    padding-bottom: 10px;
-}
-.the-story .parkzone-journeys{
-    padding-top:0px;
-}
-
-.the-story .parkzone-collection
-{
-    padding-top: 0px;
-}
-.parkzone-team-inr h2{
-    margin-bottom:0px;
-}
-
-.outer-video{
-    width:65%;
-}
-
-.outer-video2 {
-    width: 95%;
-    position:relative;
-    padding-right:4%;
-}
-.video-wrapper-bimgroup {
-    width: 85%;
-    display: flex;
-    justify-content: center;
-}
-
-.video-wrapper-bimgroup iframe{
-    width:100%;
-   /* position:absolute;
-    left:0;
-    top:0;*/
-}
-
-.video-container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    height: 0;
-    overflow: hidden;
-}
-
-    .video-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-
-
-p {
-    text-align:justify;
-}
-
 .journeys-slider{
     margin-bottom:30px;
 }
@@ -658,7 +516,7 @@ padding-top:0px;
     margin-bottom:0px;
 }
 
-.patterns-1 .pattern-item__disconnect-left 
+.patterns-1 .pattern-item__disconnect-left
 {
     bottom:-160px;
 }
@@ -717,7 +575,7 @@ padding-top:0px;
     width:100%;
     padding:5px;
     margin-bottom:0px;
-    
+
 }
 
 .the-story .collection-brief p {
@@ -867,7 +725,7 @@ p {
 }
 
 .song-cung-thanh-xuan .mat-bang .swiper-pagination-horizontal {
- 
+
 }
 
 .song-cung-thanh-xuan .mat-bang .swiper-pagination-bullet {
@@ -905,9 +763,9 @@ p {
 }
 
 
-/* 
+/*
 
-for zoom animation 
+for zoom animation
 uncomment this part if you haven't added this code anywhere else
 
 */
@@ -917,9 +775,9 @@ uncomment this part if you haven't added this code anywhere else
 .mfp-with-zoom.mfp-bg {
 	opacity: 0;
 	-webkit-backface-visibility: hidden;
-	-webkit-transition: all 0.3s ease-out; 
-	-moz-transition: all 0.3s ease-out; 
-	-o-transition: all 0.3s ease-out; 
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
 	transition: all 0.3s ease-out;
 }
 
@@ -930,7 +788,7 @@ uncomment this part if you haven't added this code anywhere else
 		opacity: 0.8;
 }
 
-.mfp-with-zoom.mfp-removing .mfp-container, 
+.mfp-with-zoom.mfp-removing .mfp-container,
 .mfp-with-zoom.mfp-removing.mfp-bg {
 	opacity: 0;
 }
@@ -1307,7 +1165,7 @@ uncomment this part if you haven't added this code anywhere else
         }
 
         .natural-title {
-            padding-top:20px; 
+            padding-top:20px;
             padding-bottom:20px;
         }
 
@@ -1378,7 +1236,7 @@ uncomment this part if you haven't added this code anywhere else
         .ban-dia-hoa-loai-hoa .natural-title, .ban-dia-hoa-loai-hoa .natural-title h3 {
             padding-bottom: 0px !important;
         }
-        
+
 
         .gallery-page .natural-title h3 {
             padding-top: 20px;
@@ -1568,7 +1426,7 @@ uncomment this part if you haven't added this code anywhere else
         }
     }
 
-.gallery-page .thanhxuan-convenient 
+.gallery-page .thanhxuan-convenient
 {
     padding-top:0px;
 }
@@ -1578,7 +1436,7 @@ uncomment this part if you haven't added this code anywhere else
             margin-top: 20px;
         }
 
-       
+
     }
 
 
@@ -1647,3 +1505,45 @@ uncomment this part if you haven't added this code anywhere else
             padding-top: 0px;
         }
     }
+
+@media (min-width: 1024px) {
+  .section, .section-inr {
+    height: 100vh !important;
+  }
+}
+@media (max-width: 1023px) {
+  .section, .section-inr {
+    height: auto !important;
+  }
+}
+.menu-toggle {
+    z-index: 99999;
+}
+
+@media (min-width: 1024px) {
+  .banner-pic {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .banner-pic img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+}
+@media (max-width: 1023px) {
+  .banner-pic {
+    width: 100%;
+    height: auto;
+  }
+  .banner-pic img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+  }
+}

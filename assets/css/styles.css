@@ -13,7 +13,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #21349d;
+    
 }
 
     .loading-page.hide-loading {
@@ -675,7 +675,7 @@ h3 {
 }
 
 header.fixed {
-    background-color: #21349d;
+    background-color: #29337e;
 }
 
 .header-inr {
@@ -2833,7 +2833,7 @@ area {
     width: 100px;
     height: 100px;
     border-radius: 50px;
-    background-color: #21349d;
+    
     -webkit-transform: translate3d(-50%,-50%,0) scale3d(1,1,1);
     transform: translate3d(-50%,-50%,0) scale3d(1,1,1);
     -webkit-transition: transform 0.7s cubic-bezier(.2,0,.25,1);
@@ -3196,7 +3196,7 @@ area {
 
 /*Footer*/
 .footer {
-    background-color: #21349d;
+    
     padding: 130px 0 70px 0;
 }
 
@@ -4615,7 +4615,7 @@ body[data-page="thanh-xuan-valley"] .container {
 }
 
 .floating-360 {
-    background-color: #376F59;
+    background-color: #29337e;
 }
 
 .pic-floating {
@@ -4649,7 +4649,7 @@ body[data-page="thanh-xuan-valley"] .container {
     font-size: 16px;
     color: #fff;
     padding: 5px 10px;
-    background-color: #376F59;
+    background-color: #29337e;
     line-height: 1.2;
     z-index: 1;
 }
@@ -5579,7 +5579,7 @@ body[data-page="thanh-xuan-valley"] .container {
         visibility: hidden;
         -webkit-transform: translateX(-100%);
         transform: translateX(-100%);
-        background-color: #376F59;
+        background-color: #29337e;
         -webkit-transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
         transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
         z-index: 2;
