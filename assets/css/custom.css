@@ -1548,25 +1548,35 @@ uncomment this part if you haven't added this code anywhere else
 }
 
 .section-slide2 {
-    background: #1e2a72;
+    /*background: #1e2a72;*/
+    background-image: url("../../uploads/thanglongland/background-img1.png");
     width: 100%;
     padding: 48px 0 0 0;
     font-family: 'Quicksand', 'Arial', sans-serif;
 }
 .slide2-container {
-    max-width: 1320px;
+    max-width: 1440px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 0 24px;
+    padding: 80px 24px 0 0;
+}
+
+.slide2-container .slide2-left .slide2-title {
+    font-size: 34px;
+    background: -webkit-linear-gradient(#ECD28B, #86774F);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.slide2-container .slide2-left .slide2-desc {
+    font-size: 18px;
 }
 .slide2-left {
-    flex: 1 1 40%;
+    flex: 1 1 45%;
     min-width: 320px;
-    max-width: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1594,7 +1604,7 @@ uncomment this part if you haven't added this code anywhere else
     margin-bottom: 0;
 }
 .slide2-right {
-    flex: 1 1 55%;
+    flex: 1 1 50%;
     min-width: 320px;
     display: flex;
     align-items: center;
@@ -1672,28 +1682,39 @@ uncomment this part if you haven't added this code anywhere else
 }
 .slide2-footer-info {
     width: 100%;
-    max-width: 1320px;
+    max-width: 1440px;
     margin: 0 auto;
-    padding: 38px 0 0 0;
+    padding: 38px 0 24px 0;
     background: transparent;
 }
 .slide2-footer-row {
     display: flex;
-    justify-content: space-between;
-    gap: 18px;
+    justify-content: flex-start;
+    gap: 12px;
     margin-bottom: 12px;
     flex-wrap: wrap;
 }
 .slide2-footer-item {
-    flex: 1 1 0;
-    min-width: 120px;
-    max-width: 210px;
-    background: rgba(255,255,255,0.03);
-    border-radius: 12px;
-    padding: 18px 12px 12px 12px;
+    color: #fff;
+    max-width: 360px;
+    width: 24%;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: start;
+    gap: 12px;
+}
+
+.text-block .title {
+    font-size: 16px;
+}
+
+.text-block .desc {
+    font-size: 18px;
+    font-weight: bold;
+    background: -webkit-linear-gradient(#ECD28B, #86774F);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .slide2-footer-icon {
     font-size: 1.5rem;
@@ -1941,7 +1962,8 @@ Slide2
     flex: 1;
     position: relative;
     min-height: 600px;
-    background: linear-gradient(45deg, #87CEEB, #4682B4);
+    /*background: linear-gradient(45deg, #87CEEB, #4682B4);*/
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
