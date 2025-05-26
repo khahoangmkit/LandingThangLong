@@ -1,4 +1,3 @@
-
 // Focus Input
 function inputHolder() {
     $('.form-control .input-txt, .form-control .area-txt').focus(function (e) {
@@ -740,3 +739,37 @@ function TotalLength() {
     console.log("Path length - " + len);
 };
 //TotalLength();
+
+// Kích hoạt Swiper cho .library-swiper nếu chưa có
+function librarySliderCustom() {
+  if (typeof Swiper !== 'undefined' && document.querySelector('.library-swiper')) {
+    new Swiper('.library-swiper', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      speed: 800,
+      loop: false,
+      navigation: {
+        nextEl: '.library-slider .swiper-button-next',
+        prevEl: '.library-slider .swiper-button-prev',
+      },
+      pagination: {
+        el: '.library-slider .swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        700: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        }
+      },
+      a11y: { enabled: false },
+    });
+  }
+}
+
+// Gọi hàm này khi page ready
+$(function(){
+  librarySliderCustom();
+});
