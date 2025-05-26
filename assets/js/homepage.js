@@ -730,15 +730,90 @@ window.addEventListener('resize', function () {
 
 })();
 
+// Khởi tạo Swiper cho slide2
+function initSlide2Swiper() {
+  if (typeof Swiper !== 'undefined' && document.querySelector('.slide2-swiper')) {
+    new Swiper('.slide2-swiper', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      speed: 800,
+      loop: true,
+      navigation: {
+        nextEl: '.slide2-arrow-next',
+        prevEl: '.slide2-arrow-prev',
+      },
+      pagination: {
+        el: '.slide2-pagination',
+        clickable: true,
+        dynamicBullets: true,
+      },
+      breakpoints: {
+        // Khi màn hình >= 576px
+        576: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        // Khi màn hình >= 992px
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        }
+      },
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+    });
+  }
+}
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Active menu
+    var nav = document.querySelector('body').getAttribute('data-page');
+    nav && (document.querySelector('.header li[data-nav=' + nav + ']') && document.querySelector('.header li[data-nav=' + nav + ']').classList.add('active'));
 
+    setTimeout(function () {
+        if (document.querySelector('#mainVideo')) {
+            document.querySelector('.video-box').classList.add('video-playing');
+            document.querySelector('#mainVideo').play();
+        }
+    }, 1000);
 
-function TotalLength() {
-    var path = document.querySelector('#naturePath');
-    var len = Math.round(path.getTotalLength());
-    console.log("Path length - " + len);
-};
-//TotalLength();
+    if ($('.experience').length) {
+        scrollSmooth();
+    }
+
+    if ($('.map').length) {
+        mapSetup();
+    }
+
+    groupTabspainSlider();
+    initGroupTab();
+    tabSpain();
+    journeySlider();
+    librarySlider();
+    teamSlider();
+    teamSlider1();
+    sprText();
+    createLightBoxSlider();
+
+    setTimeout(function () {
+        delayText();
+        scrollPopUp();
+    }, 300)
+
+    setTimeout(function () {
+        $('.loading-page').addClass('hide-loading');
+        $('.experience').css({ 'margin-bottom': $('.experience').innerHeight() + 408 });
+        $('.header').addClass('ani');
+
+        aniScroll();
+
+    }, 2000);
+
+    // Khởi tạo Swiper cho slide2
+    initSlide2Swiper();
+});
 
 // Kích hoạt Swiper cho .library-swiper nếu chưa có
 function librarySliderCustom() {
