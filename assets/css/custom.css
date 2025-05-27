@@ -1505,16 +1505,6 @@ uncomment this part if you haven't added this code anywhere else
         }
     }
 
-@media (min-width: 1024px) {
-  .section, .section-inr {
-    height: 100vh !important;
-  }
-}
-@media (max-width: 1023px) {
-  .section, .section-inr {
-    height: auto !important;
-  }
-}
 .menu-toggle {
     z-index: 99999;
 }
