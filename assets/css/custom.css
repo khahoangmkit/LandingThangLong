@@ -971,30 +971,6 @@ uncomment this part if you haven't added this code anywhere else
     }
 }
 
-
-@media screen and (max-width: 1380px) {
-    /*.gallery-page .info-number {
-        float: left;
-        padding-right: 3%;
-        padding-left: 13%;
-        width: 84%;
-    }*/
-}
-
-
-    @media screen and (min-width: 1024px) {
-        /* #thanh-xuan-valley > a::before {
-        content: '';
-        position: absolute;
-        right: -24px;
-        top: 17px;
-        width: 16px;
-        height: 10px;
-        background: url(../images/arrow-down.svg) no-repeat center center;
-        background-size: 100% auto;
-    }*/
-    }
-
     @media (min-width: 1025px) and (max-width: 1440px) {
 
         .header-inr {
@@ -1002,7 +978,7 @@ uncomment this part if you haven't added this code anywhere else
         }
 
         .navigation {
-            padding-left: 100px;
+            padding-left: 200px;
         }
     }
 
@@ -1552,12 +1528,12 @@ uncomment this part if you haven't added this code anywhere else
     gap: 40px;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 80px 24px 0 0;
+    padding: 80px 32px 24px 32px;
 }
 
 .slide2-container .slide2-left .slide2-title {
     font-family:  "Montserrat", sans-serif;
-    font-size: 34px;
+    font-size: 32px;
     background: -webkit-linear-gradient(#ECD28B, #86774F);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1567,7 +1543,7 @@ uncomment this part if you haven't added this code anywhere else
     font-size: 18px;
 }
 .slide2-left {
-    flex: 1 1 45%;
+    flex: 1 1 46%;
     min-width: 320px;
     display: flex;
     flex-direction: column;
@@ -1677,7 +1653,7 @@ uncomment this part if you haven't added this code anywhere else
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
-    padding: 38px 0 24px 0;
+    padding: 38px 32px 24px 32px;
     background: transparent;
 }
 .slide2-footer-row {
@@ -1728,7 +1704,10 @@ uncomment this part if you haven't added this code anywhere else
     font-weight: 400;
     line-height: 1.4;
 }
-
+.driver-vertical {
+    width: 100%;
+    height: 40px;
+}
 @media (max-width: 1023px) {
     .section-slide2 {
         padding: 28px 0 0 0;
@@ -2306,7 +2285,7 @@ Slide2
   width: 100%;
   max-width: 1440px;
   height: 100%;
-  padding: 80px 0 40px 0;
+  padding: 80px 32px 40px 32px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -2548,4 +2527,21 @@ Slide2
 
 .map-marker {
     animation: pulse 2s infinite;
+}
+
+
+@media screen and (max-width: 1440px) and (min-width: 1024px) {
+    .slide2-container {
+        padding: 60px 24px 26px 24px;
+    }
+    .slide2-footer-row {
+        margin-top: 0;
+    }
+    .driver-vertical {
+        height: 20px;
+    }
+
+    .custom-bg-overlay {
+        /*max-width: ;*/
+    }
 }
