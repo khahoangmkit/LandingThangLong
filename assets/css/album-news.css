@@ -89,20 +89,25 @@
 
 .swiper-pagination {
     bottom: 10px !important;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
 }
 
 .swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
-    background: rgba(244, 208, 63, 0.5);
+    width: 10px;
+    height: 10px;
+    background: #ccc;
     opacity: 1;
+    margin: 0 5px;
+    border-radius: 50%;
+    cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .swiper-pagination-bullet-active {
-    background: #f4d03f;
+    background: #000;
     transform: scale(1.2);
-    box-shadow: 0 0 10px rgba(244, 208, 63, 0.8);
 }
 
 .swiper-button-next,
@@ -149,6 +154,9 @@
 }
 .swiper-album .swiper-pagination {
     bottom: 0!important;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
 }
 
 /* Responsive */
