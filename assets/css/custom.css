@@ -2354,3 +2354,7 @@ Slide2
     gap: 20px;
   }
 }
+
+.tongquan-dudan {
+    background: url("../../assets/images/map-tong-quan-duan.png") center center/cover no-repeat;
+}
