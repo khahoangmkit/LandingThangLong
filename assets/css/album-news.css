@@ -197,6 +197,7 @@ FOOTER
 .footer {
     background: linear-gradient(135deg, #3B2F87 0%, #4A3B9A 100%);
     color: white;
+    min-height: 490px!important;
     padding: 60px 40px;
     height: 490px!important;
     max-height: 490px!important;
@@ -372,7 +373,7 @@ News
 
 .news-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    /*box-shadow: 0 8px 25px rgba(0,0,0,0.15);*/
 }
 
 .news-item.featured {

@@ -2396,6 +2396,10 @@ Slide2
     z-index: 1;
 }
 
+.left-panel .accordion {
+    min-height: calc(100vh - 280px);
+}
+
 .right-panel {
     width: 55%;
     position: absolute;
@@ -2406,7 +2410,7 @@ Slide2
     height: 100%; /* Đảm bảo panel chiếm toàn bộ chiều cao */
 }
 .header-loi-the {
-    margin-top: 120px;
+    margin-top: 60px;
     margin-bottom: 40px;
     display: flex;
     flex-direction: row;
