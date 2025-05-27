@@ -1,0 +1,185 @@
+.album-duan-gallery-container-bg {
+    background-image: url("../../uploads/thanglongland/background-img1.png");
+    background-size: cover;
+    align-items: center;
+}
+.album-duan-gallery-container {
+    width: 100%;
+    max-width: 1440px;
+    padding: 40px;
+}
+
+.album-duan-gallery-title {
+    text-align: center;
+    color: #f4d03f;
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.swiper {
+    width: 100%;
+    height: 500px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 15px;
+}
+
+.album-duan-photo-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.album-duan-photo-item:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.album-duan-photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.album-duan-photo-item:hover img {
+    transform: scale(1.1);
+}
+
+.album-duan-photo-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: flex-end;
+    padding: 15px;
+}
+
+.album-duan-photo-item:hover .album-duan-photo-overlay {
+    opacity: 1;
+}
+
+.album-duan-photo-title {
+    color: white;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.swiper-pagination {
+    bottom: 10px !important;
+}
+
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: rgba(244, 208, 63, 0.5);
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+    background: #f4d03f;
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(244, 208, 63, 0.8);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #f4d03f;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: -25px;
+    transition: all 0.3s ease;
+}
+.swiper-album {
+    padding-bottom: 10px;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background: rgba(244, 208, 63, 0.2);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    content: none;
+}
+
+.swiper-album .swiper-button-next {
+    background-image: url('../images/arrow-down.svg') !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    right: 0;
+    margin-top: 0;
+}
+
+.swiper-album .swiper-button-prev {
+    background-image: url('../images/arrow-down.svg')!important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: 0;
+    margin-top: 0;
+}
+.swiper-album .swiper-pagination {
+    bottom: 0!important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .album-duan-gallery-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .swiper {
+        height: 400px;
+    }
+
+    .swiper-slide {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .album-duan-gallery-container {
+        padding: 20px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .album-duan-gallery-title {
+        font-size: 1.5rem;
+    }
+
+    .swiper-slide {
+        grid-template-columns: 1fr;
+    }
+
+    .swiper {
+        height: 350px;
+    }
+}

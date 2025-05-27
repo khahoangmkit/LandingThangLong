@@ -2356,19 +2356,15 @@ area {
     .album-box .swiper-button-prev,
     .banner-slider .swiper-button-prev {
         left: 5%;
-        background: url(../images/arrow-white-prev.png) no-repeat center center;
+        background: url(../images/arrow-prev.svg) no-repeat center center;
         background-size: 100% auto;
-        -webkit-transform: translateY(-50%) rotate(0deg);
-        transform: translateY(-50%) rotate(0deg);
     }
 
     .album-box .swiper-button-next,
     .banner-slider .swiper-button-next {
         right: 5%;
-        background: url(../images/arrow-white.png) no-repeat center center;
+        background: url(../images/arrow-next.svg) no-repeat center center;
         background-size: 100% auto;
-        -webkit-transform: translateY(-50%) rotate(0deg);
-        transform: translateY(-50%) rotate(0deg);
     }
 
 .album-txt {
