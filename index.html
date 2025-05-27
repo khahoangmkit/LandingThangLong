@@ -617,6 +617,89 @@
     </script>
   </div>
 
+  <div class="section container-news" id="tintuc">
+    <div class="container-news">
+      <h1 class="page-title">TIN TỨC</h1>
+
+      <div class="news-grid">
+        <!-- Tin tức chính (featured) -->
+        <article class="news-item featured">
+          <div class="news-image">
+            <div class="image-placeholder">
+              <img src="uploads/thanglongland/album-1.png" alt="sd">
+            </div>
+          </div>
+          <div class="news-content">
+            <h2 class="news-title">The Right Solution to Build a Sturdy Type 45 House</h2>
+            <p class="news-excerpt">
+              Planning the construction of a warehouse for both industrial, personal and other purposes must be done carefully. When the planning is done properly, the construction is...
+            </p>
+          </div>
+        </article>
+
+        <!-- Tin tức phụ 1 -->
+        <article class="news-item">
+          <div class="news-image">
+            <div class="image-placeholder">
+              <img src="uploads/thanglongland/album-5.png" alt="iamge">
+            </div>
+          </div>
+          <div class="news-content">
+            <h3 class="news-title">The Right Solution to Build a Sturdy Type 45 House</h3>
+            <!--            <p class="news-excerpt">-->
+            <!--              Modern construction techniques and sustainable materials for building efficient homes...-->
+            <!--            </p>-->
+          </div>
+        </article>
+
+        <!-- Tin tức phụ 2 -->
+        <article class="news-item">
+          <div class="news-image">
+            <div class="image-placeholder">
+              <img src="uploads/thanglongland/album-2.png" alt="image">
+            </div>
+          </div>
+          <div class="news-content">
+            <h3 class="news-title">The Right Solution to Build a Sturdy Type 45 House</h3>
+            <!--            <p class="news-excerpt">-->
+            <!--              Urban development trends and smart city solutions for modern living spaces...-->
+            <!--            </p>-->
+          </div>
+        </article>
+
+        <!-- Tin tức phụ 3 -->
+        <article class="news-item">
+          <div class="news-image">
+            <div class="image-placeholder">
+              <img src="uploads/thanglongland/album-3.png" alt="image">
+            </div>
+          </div>
+          <div class="news-content">
+            <h3 class="news-title">The Right Solution to Build a Sturdy Type 45 House</h3>
+            <!--            <p class="news-excerpt">-->
+            <!--              Innovative approaches to commercial and residential development projects...-->
+            <!--            </p>-->
+          </div>
+        </article>
+
+        <article class="news-item">
+          <div class="news-image">
+            <div class="image-placeholder">
+              <img src="uploads/thanglongland/album-2.png" alt="image">
+            </div>
+          </div>
+          <div class="news-content">
+            <h3 class="news-title">The Right Solution to Build a Sturdy Type 45 House</h3>
+            <!--            <p class="news-excerpt">-->
+            <!--              Community-focused housing developments with modern amenities and green spaces...-->
+            <!--            </p>-->
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </div>
+
 
   <div class="section" id="contact">
     <div class="container-form-new">
@@ -747,111 +830,6 @@
 <noscript id="normal-styles">
   <link href="assets/css/popup.css" rel="stylesheet" type="text/css"/>
 </noscript>
-<script>
-  var normalStyles = function () {
-    var normalNode = document.getElementById("normal-styles");
-    var normalReplacement = document.createElement("div");
-    normalReplacement.innerHTML = normalNode.textContent;
-    document.body.appendChild(normalReplacement);
-    normalNode.parentElement.removeChild(normalNode);
-  };
-  window.setTimeout(normalStyles, 0);
-
-  function initGallery() {
-    $('.gallery').each(function () { // the containers for all your galleries
-      $(this).magnificPopup({
-        delegate: 'a', // the selector for gallery item
-        type: 'image',
-        gallery: {
-          enabled: true
-        }
-      });
-    });
-  }
-
-  $(document).ready(function () {
-    initGallery();
-  });
-</script>
-<script>
-  $(document).ready(function () {
-    $('.my-gallery .image-popup').magnificPopup({
-      type: 'image',
-      closeOnContentClick: true,
-      mainClass: 'mfp-with-zoom',
-      gallery: {
-        enabled: true
-      },
-      zoom: {
-        enabled: true,
-        duration: 300,
-        easing: 'ease-in-out',
-        opener: function (openerElement) {
-          return openerElement.is('img') ? openerElement : openerElement.find('img');
-        }
-      },
-      callbacks: {
-        open: function () {
-          // Lấy danh sách ảnh
-          var items = [];
-          $('.my-gallery .image-popup').each(function () {
-            var $this = $(this);
-            items.push({
-              src: $this.attr('href'),
-              w: 1200,
-              h: 900
-            });
-          });
-
-          // Kiểm tra nếu items rỗng thì không chạy PhotoSwipe
-          if (items.length === 0) {
-            console.error("PhotoSwipe: Không có ảnh.");
-            return;
-          }
-
-          // Lấy index của ảnh đang mở
-          var index = $('.my-gallery .image-popup').index(this.st.el);
-
-          if (index < 0 || index >= items.length) {
-            console.error("PhotoSwipe: Index không hợp lệ.", index);
-            return;
-          }
-
-          // Lấy phần tử PhotoSwipe
-          var pswpElement = document.querySelectorAll('.pswp')[0];
-
-          // Khởi tạo PhotoSwipe
-          var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
-            index: index
-          });
-
-          // Khi đóng PhotoSwipe thì đóng Magnific Popup
-          gallery.listen('close', function () {
-
-            var pswpElement = document.querySelector('.pswp');
-            if (pswpElement) {
-              pswpElement.classList.remove('pswp--open');
-            }
-
-            $('.pswp').fadeOut(200, function () {
-              $(this).css({display: 'none', opacity: 0, visibility: 'hidden'});
-            });
-
-            $.magnificPopup.close();
-          });
-
-          gallery.init();
-        },
-        close: function () {
-          if (window.pswpInstance) {
-            window.pswpInstance.close();
-          }
-        }
-      }
-
-    });
-  });
-</script>
 <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
   <div class="pswp__bg"></div>
   <div class="pswp__scroll-wrap">
