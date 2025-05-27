@@ -46,7 +46,7 @@
 }
 
 .nav-convenient li {
-    font-family: "Plus Jakarta Sans";
+    font-family: "Montserrat", sans-serif;
     font-size:20px;
 }
 
@@ -703,7 +703,7 @@ h3 {
 
 h4 {
     font-size: 1.5rem;
-    font-family: 'ValueSansPro';
+    font-family: "Montserrat", sans-serif;
 }
 
 h5 {
@@ -1552,7 +1552,7 @@ uncomment this part if you haven't added this code anywhere else
     background-image: url("../../uploads/thanglongland/background-img1.png");
     width: 100%;
     padding: 48px 0 0 0;
-    font-family: 'Quicksand', 'Arial', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 .slide2-container {
     max-width: 1440px;
@@ -1566,12 +1566,14 @@ uncomment this part if you haven't added this code anywhere else
 }
 
 .slide2-container .slide2-left .slide2-title {
+    font-family:  "Montserrat", sans-serif;
     font-size: 34px;
     background: -webkit-linear-gradient(#ECD28B, #86774F);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .slide2-container .slide2-left .slide2-desc {
+    font-family:  "Montserrat", sans-serif;
     font-size: 18px;
 }
 .slide2-left {
@@ -1583,7 +1585,7 @@ uncomment this part if you haven't added this code anywhere else
 }
 .slide2-label {
     font-size: 18px;
-    color: #FFD966;
+    color: #fff;
     font-weight: 400;
     letter-spacing: 2px;
     margin-bottom: 12px;
@@ -1681,6 +1683,7 @@ uncomment this part if you haven't added this code anywhere else
     background: #FFD966;
 }
 .slide2-footer-info {
+    font-family: "Montserrat", sans-serif;
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
@@ -1706,7 +1709,8 @@ uncomment this part if you haven't added this code anywhere else
     gap: 12px;
 }
 
-.text-block .title {
+.text-block .title-thontin {
+    color: #fff;
     font-size: 16px;
 }
 
@@ -2066,7 +2070,7 @@ Slide2
 }
 
 .form-title {
-    font-family: 'ValueSansPro', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 32px;
     font-weight: 700;
     color: #2c3e50;
@@ -2319,6 +2323,7 @@ Slide2
   justify-content: center;
 }
 .custom-bg-title {
+    font-family:  "Montserrat", sans-serif;
     max-width: 600px;
     font-size: 40px;
     font-weight: bold;

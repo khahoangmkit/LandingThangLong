@@ -735,7 +735,7 @@ function initSlide2Swiper() {
   if (typeof Swiper !== 'undefined' && document.querySelector('.slide2-swiper')) {
     new Swiper('.slide2-swiper', {
       slidesPerView: 1,
-      spaceBetween: 20,
+      spaceBetween: 10,
       speed: 800,
       loop: true,
       navigation: {
@@ -751,12 +751,12 @@ function initSlide2Swiper() {
         // Khi màn hình >= 576px
         576: {
           slidesPerView: 2,
-          spaceBetween: 20,
+          spaceBetween: 5,
         },
         // Khi màn hình >= 992px
         992: {
           slidesPerView: 3,
-          spaceBetween: 30,
+          spaceBetween: 10,
         }
       },
       autoplay: {

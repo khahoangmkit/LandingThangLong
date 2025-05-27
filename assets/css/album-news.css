@@ -10,7 +10,7 @@
 }
 
 .album-duan-gallery-title {
-    font-family: 'ValueSansPro', 'Arial', sans-serif;
+    font-family: "Montserrat", sans-serif;
     text-align: center;
     background: -webkit-linear-gradient(top left, #ECD28B 0%, #86774F 100%);
     -webkit-background-clip: text;
@@ -200,7 +200,7 @@ FOOTER
     padding: 60px 40px;
     height: 490px!important;
     max-height: 490px!important;
-    font-family: 'Arial', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 .footer-container {
