@@ -2050,7 +2050,7 @@ Slide2
 .bird:nth-child(5) { top: 12px; left: 80px; animation-delay: 2s; }
 
 @keyframes fly {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    0%, 100% { transform: translateY(0px); }
     25% { transform: translateY(-3px) rotate(-5deg); }
     75% { transform: translateY(3px) rotate(5deg); }
 }
@@ -2279,4 +2279,78 @@ Slide2
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+/**
+    ========================
+    Custom Background Section
+ */
+
+
+.tamdiem-section {
+    background: url("../../assets/images/tamdiem.png") center center/cover no-repeat;
+    width: 100%;
+    padding: 48px 0 0 0;
+    /*font-family: 'Quicksand', 'Arial', sans-serif;*/
+    position: relative;
+}
+
+.custom-bg-section {
+  position: absolute;
+    background: linear-gradient(to top, #292f78 0%, rgba(76, 97, 215, 0.25) 100%);
+    bottom: 0;
+    left: 0;
+    right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-bg-overlay {
+  width: 100%;
+  max-width: 1440px;
+  height: 100%;
+  padding: 80px 0 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.custom-bg-title {
+    max-width: 600px;
+    font-size: 40px;
+    font-weight: bold;
+    background: -webkit-linear-gradient(#ECD28B, #86774F);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.custom-bg-content {
+  display: flex;
+  gap: 40px;
+  max-width: 1440px;
+  width: 100%;
+  z-index: 2;
+  color: #fff;
+}
+
+.custom-bg-col {
+  flex: 1;
+    font-size: 16px;
+  border-radius: 12px;
+  padding: 24px 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.custom-bg-col h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #ffd700;
+}
+
+@media (max-width: 800px) {
+  .custom-bg-content {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
