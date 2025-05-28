@@ -1724,6 +1724,9 @@ uncomment this part if you haven't added this code anywhere else
     .slide2-title {
         font-size: 1.35rem;
     }
+    .slide2-slider .slide2-pagination {
+        transform: translateX(0) !important;
+    }
     .slide2-slider {
         max-width: 100vw;
         min-width: 0;
@@ -2476,7 +2479,7 @@ Slide2
 }
 
 .accordion-item.active .accordion-content {
-    max-height: 300px;
+    max-height: 400px;
     padding: 20px;
 }
 

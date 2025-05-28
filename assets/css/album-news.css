@@ -448,12 +448,13 @@ News
 .news-excerpt {
     color: #666;
     font-size: 0.9rem;
+    margin-bottom: 15px;
     line-height: 1.5;
-    flex: 1;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .news-item.featured .news-excerpt {
