@@ -327,17 +327,10 @@ FOOTER
 @media (max-width: 768px) {
     .footer-container {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 0;
         text-align: center;
     }
 
-    .footer {
-        padding: 40px 20px;
-    }
-
-    .contact-item {
-        justify-content: center;
-    }
 }
 
 /**
@@ -536,5 +529,28 @@ News
 @media screen and (max-width: 1440px) and (min-width: 1024px) {
     .album-duan-gallery-container {
         max-width: 1024px;
+    }
+}
+
+
+@media screen and (max-width: 1023px) {
+    .footer {
+        min-height: unset!important;
+        padding: 40px 16px;
+        height: 100%!important;
+        max-height: unset!important;
+    }
+    .footer-center {
+        margin-bottom: 20px;
+    }
+    .footer-center .center-title {
+        text-align: center;
+    }
+    .contact-info-footer {
+        align-items: center;
+    }
+    .footer-container {
+        gap: 0;
+        text-align: center;
     }
 }

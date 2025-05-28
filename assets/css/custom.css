@@ -1756,16 +1756,22 @@ uncomment this part if you haven't added this code anywhere else
         gap: 8px;
     }
     .slide2-footer-item {
-        min-width: 46%;
+        min-width: 100%;
         max-width: 100%;
         padding: 12px 8px 8px 8px;
         border-radius: 8px;
+    }
+    .slide2-footer-item .icon-block img{
+     width: 30px!important;
     }
     .slide2-footer-title {
         font-size: 0.95rem;
     }
     .slide2-footer-desc {
         font-size: 0.9rem;
+    }
+    .driver-vertical {
+        display: none;
     }
 }
 
@@ -2291,6 +2297,9 @@ Slide2
   align-items: flex-start;
   justify-content: center;
 }
+.image-tamdiem-mobile {
+    display: none;
+}
 .custom-bg-title {
     font-family:  "Montserrat", sans-serif;
     max-width: 600px;
@@ -2543,5 +2552,59 @@ Slide2
 
     .custom-bg-overlay {
         /*max-width: ;*/
+    }
+}
+
+
+@media screen and (max-width: 1023px) {
+    .tamdiem-section {
+        background-image: url(../../uploads/thanglongland/background-img1.png);
+    }
+    .custom-bg-title{
+        font-size: 32px;
+    }
+
+    .custom-bg-section {
+        position: relative;
+        background: unset;
+    }
+
+    .custom-bg-overlay {
+        padding: 20px 12px 16px 12px;
+    }
+
+    .image-tamdiem-mobile {
+        padding: 0 12px;
+    }
+
+    .image-tamdiem-mobile img{
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .custom-bg-col {
+        padding: 8px 0;
+    }
+
+
+    .container-section-loi-the {
+        flex-direction: column-reverse;
+    }
+
+    .container-section-loi-the .right-panel {
+        position: relative;
+        width: 100%;
+        padding: 12px;
+        background: unset;
+    }
+    .container-loi-the .left-panel {
+        width: 100%;
+    }
+    .header-loi-the {
+        margin-top: 20px;
+    }
+    .map-container img {
+        border-radius: 4px;
     }
 }
