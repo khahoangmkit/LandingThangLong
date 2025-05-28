@@ -1167,6 +1167,15 @@ html[lang="en"] a.en {
     top: 210px;
     right: 60px;
 }
+@media screen and (max-width: 1023px) {
+    .image-slogan img{
+        width: 70vw !important;
+        height: auto !important;
+        position: absolute;
+        top: 100px;
+        left: 13vw;
+    }
+}
 
 .banner-txt {
     position: absolute;

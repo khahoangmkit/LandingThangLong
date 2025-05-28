@@ -552,6 +552,9 @@
                   rows: 2,
                   fill: 'row',
                 },
+                // grid: {
+                //   rows: 1
+                // },
                 spaceBetween: 10
               },
               // when window width is >= 768px
@@ -649,6 +652,93 @@
           </div>
         </article>
       </div>
+
+      <div class="swiper-news-container">
+        <div class="swiper mySwiperNewsMobile">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <article class="news-item">
+                <div class="news-image">
+                  <div class="image-placeholder">
+                    <img src="uploads/thanglongland/album-1.png" alt="sd">
+                  </div>
+                </div>
+                <div class="news-content">
+                  <h3 class="news-title">The Right Solution to Build a Sturdy Type 45 House</h3>
+                </div>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="news-item">
+                <div class="news-image">
+                  <div class="image-placeholder">
+                    <img src="uploads/thanglongland/album-5.png" alt="iamge">
+                  </div>
+                </div>
+                <div class="news-content">
+                  <h3 class="news-title">The Right Solution to Build a Sturdy Type 45 House</h3>
+                </div>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="news-item">
+                <div class="news-image">
+                  <div class="image-placeholder">
+                    <img src="uploads/thanglongland/album-2.png" alt="image">
+                  </div>
+                </div>
+                <div class="news-content">
+                  <h3 class="news-title">The Right Solution to Build a Sturdy Type 45 House</h3>
+                </div>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="news-item">
+                <div class="news-image">
+                  <div class="image-placeholder">
+                    <img src="uploads/thanglongland/album-3.png" alt="image">
+                  </div>
+                </div>
+                <div class="news-content">
+                  <h3 class="news-title">The Right Solution to Build a Sturdy Type 45 House</h3>
+                </div>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="news-item">
+                <div class="news-image">
+                  <div class="image-placeholder">
+                    <img src="uploads/thanglongland/album-2.png" alt="image">
+                  </div>
+                </div>
+                <div class="news-content">
+                  <h3 class="news-title">The Right Solution to Build a Sturdy Type 45 House</h3>
+                </div>
+              </article>
+            </div>
+
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Initialize Swiper -->
+      <script>
+        var swiper = new Swiper(".mySwiperNewsMobile", {
+          grabCursor: true,
+          spaceBetween: 20, // Sửa từ 'gap' thành 'spaceBetween'
+          centeredSlides: true,
+          slidesPerView: "auto",
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          pagination: {
+            el: ".swiper-pagination",
+          },
+        });
+      </script>
 
     </div>
   </div>
