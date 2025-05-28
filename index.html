@@ -155,16 +155,26 @@
 <!--          </div>-->
 
 
-          <div class="swiper mySwiperMobile">
-            <div class="swiper-wrapper">
-<!--              <div class="swiper-slide"><img src="assets/images/bosuutap/slide1.png" style="width: 100%; object-fit: cover;" alt="Phối cảnh dự án" ></div>-->
-<!--              <div class="swiper-slide"><img src="assets/images/bosuutap/slide2.png" alt="Phối cảnh dự án" ></div>-->
-<!--              <div class="swiper-slide"><img src="assets/images/bosuutap/slide3.png" alt="Phối cảnh dự án" ></div>-->
-              <div class="swiper-slide"><img src="uploads/slides/silde1-al.png" alt="Phối cảnh dự án"></div>
-              <div class="swiper-slide"><img src="uploads/slides/silde1-al.png" alt="Phối cảnh dự án"></div>
-              <div class="swiper-slide"><img src="uploads/slides/silde1-al.png" alt="Phối cảnh dự án"></div>
-              <div class="swiper-slide"><img src="uploads/slides/silde1-al.png" alt="Phối cảnh dự án"></div>
-              <div class="swiper-slide"><img src="uploads/slides/silde1-al.png" alt="Phối cảnh dự án"></div>
+          <div class="swiper-slide-container">
+            <div class="swiper mySwiperMobile">
+              <div class="swiper-wrapper">
+                <!--              <div class="swiper-slide"><img src="assets/images/bosuutap/slide1.png" style="width: 100%; object-fit: cover;" alt="Phối cảnh dự án" ></div>-->
+                <!--              <div class="swiper-slide"><img src="assets/images/bosuutap/slide2.png" alt="Phối cảnh dự án" ></div>-->
+                <!--              <div class="swiper-slide"><img src="assets/images/bosuutap/slide3.png" alt="Phối cảnh dự án" ></div>-->
+                <div class="swiper-slide"><img src="uploads/slides/silde1-al.png" alt="Phối cảnh dự án"></div>
+                <div class="swiper-slide"><img src="uploads/slides/silde1-al.png" alt="Phối cảnh dự án"></div>
+                <div class="swiper-slide"><img src="uploads/slides/silde1-al.png" alt="Phối cảnh dự án"></div>
+                <div class="swiper-slide"><img src="uploads/slides/silde1-al.png" alt="Phối cảnh dự án"></div>
+                <div class="swiper-slide"><img src="uploads/slides/silde1-al.png" alt="Phối cảnh dự án"></div>
+              </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next" style="width: 40px;">
+              <img src="assets/images/arrow-down.svg" alt="arrow-right" width="40">
+            </div>
+            <div class="swiper-button-prev"  style="width: 40px;">
+              <img src="assets/images/arrow-down.svg" alt="arrow-left" width="40">
             </div>
           </div>
 
@@ -181,6 +191,10 @@
                 depth: 100,
                 modifier: 1,
                 slideShadows: true,
+              },
+              navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
               },
               pagination: {
                 el: ".swiper-pagination",
@@ -450,7 +464,6 @@
     <script>
       function toggleAccordion(header) {
         const item = header.parentElement;
-        const content = item.querySelector('.accordion-content');
 
         // Close all other items
         document.querySelectorAll('.accordion-item').forEach(otherItem => {

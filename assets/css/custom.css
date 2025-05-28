@@ -1849,6 +1849,19 @@ Slide2
   align-items: center;
   height: 100%; /* Đảm bảo slider chiếm toàn bộ chiều cao */
 }
+.slide2-slider .swiper-slide-container {
+    width: 100%;
+}
+.slide2-slider .swiper-slide-container .swiper-button-next {
+    top: 60%;
+}
+.slide2-slider .swiper-slide-container .swiper-button-prev {
+    top: 60%;
+}
+.slide2-slider .swiper-slide-container .swiper-pagination {
+    bottom: -20px !important;
+
+}
 
 .slide2-swiper .swiper-slide {
   text-align: center;
