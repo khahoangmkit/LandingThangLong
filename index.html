@@ -28,21 +28,17 @@
           display: none;
       }
   </style>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   <link as="style" href="assets/css/styles.css" rel="stylesheet"/>
   <link as="style" href="assets/css/custom.css" rel="stylesheet"/>
   <link as="style" href="assets/css/album-news.css" rel="stylesheet"/>
-  <!-- PhotoSwipe CSS -->
-  <link href="ajax/libs/photoswipe/4.1.3/photoswipe.min.css" rel="stylesheet"/>
-  <link href="ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css" rel="stylesheet"/>
-  <!-- PhotoSwipe -->
-  <script src="ajax/libs/photoswipe/4.1.3/photoswipe.min.js"></script>
-  <script src="ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+  <script src="ajax/libs/swiper/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="ajax/libs/swiper/swiper-bundle.min.css"/>
 
 
 
@@ -664,7 +660,7 @@
     <div class="container-form-new">
       <div class="main-content">
         <div class="image-section">
-          <img alt="Contact form" loading="lazy" style="width: 100%; height:100%; object-fit:cover;"
+          <img alt="Contact form" loading="lazy" style="width: 100%; height:130%; object-fit:cover; object-position: left"
                src="uploads/thanglongland/form-image.png"/>
         </div>
 
@@ -773,12 +769,8 @@
     <div class="pic pic-floating"><img alt="Liên hệ" src="assets/images/scroll-top.png"/></div>
   </a>
 </div>
-<!--Popup-->
-<!--/Popup-->
 <script src="assets/js/common.js"></script>
 <script src="assets/js/smooth-scrollbar.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/fullpage.js@4.0.20/dist/fullpage.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullpage.js@4.0.20/dist/fullpage.min.css"/>
 <script src="assets/js/swiper.js"></script>
 <script src="assets/js/jquery-min.js"></script>
 <script src="assets/js/jquery.nicescroll.min.js"></script>
@@ -951,47 +943,7 @@
         });
       });
     }
-    
-    // Khởi tạo fullPage.js
-    if (window.innerWidth > 1023 && document.getElementById('fullpage')) {
-      new fullpage('#fullpage', {
-        autoScrolling: true,
-        navigation: false,
-        scrollHorizontally: true,
-        fitToSection: true,
-        scrollSpeed: 1000,
-        anchors: [], // Không sử dụng anchors để tránh xung đột với smooth scroll
-        scrollBar: true, // Cho phép scrollbar để có thể scroll tự nhiên
-        afterLoad: function (origin, destination, direction) {
-          var header = document.querySelector('header');
-          if (destination.index > 0) {
-            header.classList.add('fixed');
-          } else {
-            header.classList.remove('fixed');
-          }
-          
-          // Cập nhật active state cho menu dựa trên section hiện tại
-          const currentId = destination.item.getAttribute('id');
-          if (currentId) {
-            document.querySelectorAll('.nav li').forEach(item => {
-              item.classList.remove('active');
-              const anchor = item.querySelector('a');
-              if (anchor && anchor.getAttribute('href') === '#' + currentId) {
-                item.classList.add('active');
-              }
-            });
-          }
-        }
-      });
-    } else if (window.innerWidth <= 1023) {
-      // Nếu đã khởi tạo fullpage trước đó thì destroy
-      if (window.fullpage_api) {
-        window.fullpage_api.destroy('all');
-      }
-      // Kích hoạt highlight navigation khi scroll trên mobile
-      setActiveNavOnScroll();
-    }
-    
+
     // Xử lý resize window
     window.addEventListener('resize', function() {
       if (window.innerWidth > 1023) {

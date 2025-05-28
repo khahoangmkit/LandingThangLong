@@ -1930,7 +1930,7 @@ Slide2
 */
 
 .container-form-new {
-    min-height: 100vh;
+    margin-top: 80px;
     display: flex;
     align-items: center;
     padding: 20px;
@@ -2292,7 +2292,7 @@ Slide2
 
 .custom-bg-section {
   position: absolute;
-    background: linear-gradient(to top, #292f78 0%, rgba(76, 97, 215, 0.25) 100%);
+    background: linear-gradient(to top, #292f78 60%, rgba(76, 97, 215, 0.25) 100%);
     bottom: 0;
     left: 0;
     right: 0;
@@ -2343,7 +2343,6 @@ Slide2
   max-width: 450px;
   border-radius: 12px;
   padding: 24px 0;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
 }
 
 .custom-bg-col h3 {
