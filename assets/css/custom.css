@@ -2050,7 +2050,7 @@ Slide2
     font-family: "Montserrat", sans-serif;
     font-size: 32px;
     font-weight: 700;
-    color: #2c3e50;
+    color: #2C3088;
     margin-bottom: 15px;
     letter-spacing: 1px;
 }
@@ -2167,6 +2167,13 @@ Slide2
     .form-section {
         padding: 60px 40px;
         order: 1;
+    }
+}
+
+@media (max-width: 1023px) {
+
+    .image-section {
+       display: none;
     }
 }
 
