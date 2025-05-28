@@ -66,9 +66,10 @@ async function loadEmailTemplate() {
             <h2>Thông Tin Liên Hệ Mới</h2>
           </div>
           <div class="content">
-            <p><strong>Tên:</strong> {{name}}</p>
+            <p><strong>Tên:</strong> {{fullName}}</p>
+            <p><strong>Điện thoại:</strong> {{phone}}</p>
             <p><strong>Email:</strong> {{email}}</p>
-            <p><strong>Nội dung:</strong> {{comment}}</p>
+            <p><strong>Lời nhắn:</strong> {{message}}</p>
             <p><strong>Thời gian:</strong> {{timestamp}}</p>
           </div>
           <div class="footer">
@@ -85,16 +86,24 @@ async function loadEmailTemplate() {
 function validateForm(data) {
   const errors = [];
   
-  if (!data.FullName || data.FullName.trim() === "") {
-    errors.push("Vui lòng nhập tên");
+  if (!data.fullName || data.fullName.trim() === "") {
+    errors.push("Vui lòng nhập họ và tên");
   }
   
-  if (!data.Email || data.Email.trim() === "") {
-    errors.push("Vui lòng nhập email");
+  if (!data.phone || data.phone.trim() === "") {
+    errors.push("Vui lòng nhập số điện thoại");
   } else {
-    // Simple email validation regex
+    // Simple phone validation regex (e.g., Vietnamese phone numbers, 10 digits starting with 0)
+    const phoneRegex = /^(0)(3[2-9]|5[6|8|9]|7[0|6-9]|8[0-6|8|9]|9[0-4|6-9])[0-9]{7}$/;
+    if (!phoneRegex.test(data.phone)) {
+      errors.push("Số điện thoại không hợp lệ (cần đủ 10 số, bắt đầu bằng 0 và đúng định dạng nhà mạng Việt Nam)");
+    }
+  }
+  
+  if (data.email && data.email.trim() !== "") {
+    // Simple email validation regex if email is provided
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(data.Email)) {
+    if (!emailRegex.test(data.email)) {
       errors.push("Email không hợp lệ");
     }
   }
@@ -107,9 +116,9 @@ app.post("/Contact/SubmitForm", upload.none(), async (req, res) => {
   try {
     console.log("Form submission received:", req.body);
     
-    // Validate form data
-    const { FullName, Email, Comment } = req.body;
-    const validationErrors = validateForm(req.body);
+    // Validate form data using field names from HTML form
+    const { fullName, phone, email, message } = req.body;
+    const validationErrors = validateForm({ fullName, phone, email, message });
     
     if (validationErrors.length > 0) {
       return res.status(400).json({ 
@@ -130,9 +139,10 @@ app.post("/Contact/SubmitForm", upload.none(), async (req, res) => {
     });
     
     emailTemplate = emailTemplate
-      .replace("{{name}}", FullName)
-      .replace("{{email}}", Email)
-      .replace("{{comment}}", Comment || "Không có nội dung")
+      .replace("{{fullName}}", fullName)
+      .replace("{{phone}}", phone || "Không cung cấp")
+      .replace("{{email}}", email || "Không cung cấp")
+      .replace("{{message}}", message || "Không có lời nhắn")
       .replace("{{timestamp}}", timestamp);
     
     // Configure email options
@@ -140,7 +150,7 @@ app.post("/Contact/SubmitForm", upload.none(), async (req, res) => {
       from: 'Landing Page Thăng Long <hocde99@gmail.com>',
       to: 'khahoangmkit@gmail.com',
       subject: 'Thông tin liên hệ mới từ Landing Page',
-      text: `Tên: ${FullName}\nEmail: ${Email}\nNội dung: ${Comment || "Không có nội dung"}`,
+      text: `Tên: ${fullName}\nSố điện thoại: ${phone || "Không cung cấp"}\nEmail: ${email || "Không cung cấp"}\nLời nhắn: ${message || "Không có lời nhắn"}\nThời gian: ${timestamp}`,
       html: emailTemplate
     };
     
