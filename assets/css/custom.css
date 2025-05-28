@@ -2040,7 +2040,7 @@ Slide2
 
 @keyframes fly {
     0%, 100% { transform: translateY(0px); }
-    25% { transform: translateY(-3px) rotate(-5deg); }
+    50% { transform: translateY(-3px) rotate(-5deg); }
     75% { transform: translateY(3px) rotate(5deg); }
 }
 
@@ -2632,3 +2632,29 @@ Slide2
         border-radius: 4px;
     }
 }
+
+/* Scroll-triggered Animation Initial States */
+.cascade-fade-in-initial {
+  opacity: 0;
+}
+
+.cascade-fade-in-up-initial {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.cascade-fade-in-left-initial {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.cascade-fade-in-right-initial {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+.cascade-scale-up-initial {
+  opacity: 0;
+  transform: scale(0.9);
+}
+/* End Scroll-triggered Animation Initial States */

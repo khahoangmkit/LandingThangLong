@@ -463,21 +463,6 @@
         item.classList.toggle('active');
       }
 
-      // Add smooth scrolling animation
-      document.addEventListener('DOMContentLoaded', function() {
-        const items = document.querySelectorAll('.accordion-item');
-        items.forEach((item, index) => {
-          item.style.animationDelay = `${index * 0.1}s`;
-          item.style.opacity = '0';
-          item.style.transform = 'translateX(-20px)';
-
-          setTimeout(() => {
-            item.style.transition = 'all 0.5s ease';
-            item.style.opacity = '1';
-            item.style.transform = 'translateX(0)';
-          }, index * 100);
-        });
-      });
     </script>
   </div>
 
@@ -775,7 +760,9 @@
 <script src="assets/js/jquery-min.js"></script>
 <script src="assets/js/jquery.nicescroll.min.js"></script>
 <script src="assets/js/jquery.blast.js"></script>
-<script src="assets/js/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="assets/js/scroll-animations.js"></script>
 <script src="assets/js/jquery.rwdImageMaps.min.js"></script>
 <script src="assets/js/panzoom.min.js"></script>
 <script src="assets/js/homepage.js"></script>
