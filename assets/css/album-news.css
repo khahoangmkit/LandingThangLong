@@ -203,7 +203,7 @@ FOOTER
 ==========================
  */
 .footer {
-    background: linear-gradient(135deg, #3B2F87 0%, #4A3B9A 100%);
+    background-image: url(../images/background-img1.png);
     color: white;
     min-height: 490px!important;
     padding: 60px 40px;
@@ -320,7 +320,6 @@ FOOTER
 }
 
 .social-icon:hover {
-    background: rgba(255, 255, 255, 0.2);
     transform: translateY(-2px);
 }
 
@@ -350,7 +349,7 @@ News
     text-align: center;
     font-size: 64px;
     font-weight: bold;
-    color: #2c5aa0;
+    color: #2C3088;
     margin-bottom: 50px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -431,7 +430,7 @@ News
     font-family: "Montserrat", sans-serif;
     font-size: 1.1rem;
     font-weight: 600;
-    color: #2c5aa0;
+    color: #2C3088;
     margin-bottom: 12px;
     line-height: 1.4;
     display: -webkit-box;
@@ -535,6 +534,7 @@ News
 
 @media screen and (max-width: 1023px) {
     .footer {
+        background-image: url(../images/background-img1.png);
         min-height: unset!important;
         padding: 40px 16px;
         height: 100%!important;
