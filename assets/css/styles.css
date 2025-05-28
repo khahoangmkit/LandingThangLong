@@ -1160,6 +1160,13 @@ html[lang="en"] a.en {
     height: auto;
     overflow: hidden;
 }
+.image-slogan img{
+    width: 620px!important;
+    height: auto!important;
+    position: absolute;
+    top: 210px;
+    right: 60px;
+}
 
 .banner-txt {
     position: absolute;

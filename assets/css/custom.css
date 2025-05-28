@@ -1538,7 +1538,7 @@ uncomment this part if you haven't added this code anywhere else
 }
 .slide2-container .slide2-left .slide2-desc {
     font-family:  "Montserrat", sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     text-align: justify;
 }
 .slide2-left {
@@ -1548,12 +1548,19 @@ uncomment this part if you haven't added this code anywhere else
     flex-direction: column;
     justify-content: center;
 }
+@media (max-width: 1023px) {
+
+    .slide2-label img{
+        width: 80%;
+        max-width: 160px;
+    }
+}
 .slide2-label {
     font-size: 18px;
     color: #fff;
     font-weight: 400;
     letter-spacing: 2px;
-    margin-bottom: 12px;
+    padding-left: 16px;
     text-transform: uppercase;
 }
 .slide2-title {
@@ -1676,11 +1683,11 @@ uncomment this part if you haven't added this code anywhere else
 
 .text-block .title-thontin {
     color: #fff;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .text-block .desc {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: bold;
     background: -webkit-linear-gradient(#ECD28B, #86774F);
     -webkit-background-clip: text;
@@ -2278,10 +2285,8 @@ Slide2
 
 
 .tamdiem-section {
-    background: url("../../assets/images/tamdiem.png") center center/cover no-repeat;
+    /*background: url("../../assets/images/tamdiem.png") center center/cover no-repeat;*/
     width: 100%;
-    padding: 48px 0 0 0;
-    /*font-family: 'Quicksand', 'Arial', sans-serif;*/
     position: relative;
 }
 
@@ -2306,15 +2311,16 @@ Slide2
   align-items: flex-start;
   justify-content: center;
 }
-.image-tamdiem-mobile {
-    display: none;
+.image-tamdiem-mobile img{
+    /*display: none;*/
+    width: 100%;
 }
 .custom-bg-title {
     font-family:  "Montserrat", sans-serif;
     max-width: 600px;
     font-size: 40px;
     font-weight: bold;
-    background: -webkit-linear-gradient(#ECD28B, #86774F);
+    background: -webkit-linear-gradient(#ECD28B 0%, #86774F 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -2328,9 +2334,13 @@ Slide2
   color: #fff;
 }
 
+.custom-bg-col span {
+    text-align: justify;
+}
 .custom-bg-col {
   flex: 1;
-    font-size: 16px;
+  font-size: 16px;
+  max-width: 450px;
   border-radius: 12px;
   padding: 24px 0;
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
@@ -2349,9 +2359,11 @@ Slide2
   }
 }
 
-.tongquan-dudan {
-    background: url("../../assets/images/map-tong-quan-duan.png") center center/cover no-repeat;
+.image-tongquandudan img {
+    width: 100%;
+    /*background: url("../../assets/images/map-tong-quan-duan.png") center center/cover no-repeat;*/
 }
+
 
 
 /*
@@ -2384,7 +2396,7 @@ Slide2
 }
 
 .left-panel .accordion {
-    min-height: calc(100vh - 280px);
+    min-height: 990px;
 }
 
 .right-panel {
@@ -2483,6 +2495,10 @@ Slide2
     overflow: hidden;
     transition: max-height 0.3s ease, padding 0.3s ease;
     background: rgba(0, 0, 0, 0.2);
+}
+
+.accordion-content .content-list {
+    list-style: circle;
 }
 
 .accordion-item.active .accordion-content {

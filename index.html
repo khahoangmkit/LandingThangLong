@@ -31,7 +31,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-  <link as="style" href="assets/css/swiper.css" rel="stylesheet"/>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   <link as="style" href="assets/css/styles.css" rel="stylesheet"/>
@@ -40,41 +39,33 @@
   <!-- PhotoSwipe CSS -->
   <link href="ajax/libs/photoswipe/4.1.3/photoswipe.min.css" rel="stylesheet"/>
   <link href="ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css" rel="stylesheet"/>
-  <link crossorigin="anonymous" href="ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
-        integrity="sha512-C1zvdb9R55RAkl6xCLTPt+Wmcz6s+ccOvcr6G57lbm8M2fbgn2SUjUJbQ13fEyjuLViwe97uJvwa1EUf4F1Akw=="
-        referrerpolicy="no-referrer" rel="stylesheet">
   <!-- PhotoSwipe -->
   <script src="ajax/libs/photoswipe/4.1.3/photoswipe.min.js"></script>
   <script src="ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
-  <!-- Google Tag Manager -->
-  <!-- End Google Tag Manager -->
-  <!-- Google Tag Manager -->
-  <script>
-    (function (w, d, s, l, i) {
-      w[l] = w[l] || [];
-      w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      });
-      var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
-      j.async = true;
-      j.src =
-        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-      f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-KRNDBT8C');</script>
-  <!-- End Google Tag Manager -->
-  </link></link></meta></meta></head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+
+
 <body class="trang-chu" data-page="trang-chu">
-<!-- Google Tag Manager (noscript) -->
-<!-- End Google Tag Manager (noscript) -->
-<!-- Google Tag Manager (noscript) -->
-<noscript>
-  <iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-KRNDBT8C"
-          style="display:none;visibility:hidden" width="0"></iframe>
-</noscript>
-<!-- End Google Tag Manager (noscript) -->
+
 <style>
+    .swiper {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 300px;
+        height: 300px;
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+    }
 </style>
 <header class="header">
   <div class="header-inr">
@@ -116,26 +107,20 @@
     </div>
   </div>
 </header>
-<div class="container" id="fullpage">
+<div class="container">
 
   <div class="section banner" id="banner">
     <div class="banner-box">
       <div class="banner-item">
         <div class="pic banner-pic">
-          <img alt="VỀ THUNG LŨNG THANH XUÂN" class="pc" height="1326"
+          <img alt="Dự án topaz city core" class="pc" height="1326"
                src="uploads/thanglongland/background-home.png" width="2880"/>
-          <img alt="VỀ THUNG LŨNG THANH XUÂN" class="sp" height="1086"
-               src="uploads/thanglongland/background-home.png" width="750"/>
-        </div>
-        <div class="banner-txt">
-          <div class="cnt">
-            <div class="txt-outer color-white">
-              <div class="scroll-down">
-                <svg fill="none" height="125" viewbox="0 0 125 125" width="125" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="#scrollDown"></use>
-                </svg>
-              </div>
-            </div>
+          <img alt="Dự án topaz city core" class="sp" height="1086"
+               src="uploads/thanglongland/background-home.png" width="750" style="object-fit: cover; object-position: center"/>
+
+          <div class="image-slogan">
+            <img alt="Dự án topaz city core" width="620"
+                 src="assets/images/bosuutap-banner.png" />
           </div>
         </div>
       </div>
@@ -146,8 +131,11 @@
   <div class="section section-slide2" id="thongtintongquan">
     <div class="slide2-container">
       <div class="slide2-left">
-        <div class="slide2-label">Bộ Sưu Tập</div>
-        <h2 class="slide2-title">NHÀ PHỐ THƯƠNG MẠI HÀNH CHÍNH TOPAZ CITY CORE</h2>
+        <div class="slide2-label"><img src="assets/images/bosuutap.svg" alt="bo suu tap"></div>
+        <div class="image-title">
+          <img src="assets/images/nhaphothuongmai.svg" style="width: 100%;" alt="">
+        </div>
+<!--        <h2 class="slide2-title">NHÀ PHỐ THƯƠNG MẠI HÀNH CHÍNH TOPAZ CITY CORE</h2>-->
         <div class="slide2-desc">
           Toạ lạc tại thủ phủ hành chính mới – nơi được ví như “Quận thị chính” của thành phố, trên trục siêu tăng trưởng bất động sản, Topaz City Core sở hữu vị trí đắc địa đối diện văn phòng tỉnh ủy- cơ quan hành chính - kinh tế trọng yếu, đồng thời kết nối rất gần tới Phố cổ và Trái tim di sản văn hoá. Từ toạ độ tới danh xưng, Topaz City Core xứng tầm độc bản, khi là một trong số ít các tuyến phố trung tâm hành chính.
           <br/>
@@ -156,40 +144,53 @@
       </div>
       <div class="slide2-right">
         <div class="slide2-slider">
-          <div class="swiper-container slide2-swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide"><img src="uploads/slides/silde1-al.png" alt="Phối cảnh dự án" class="slide2-img"></div>
-              <div class="swiper-slide"><img src="uploads/slides/silde1-al.png" alt="Phối cảnh dự án" class="slide2-img"></div>
-              <div class="swiper-slide"><img src="uploads/slides/silde1-al.png" alt="Phối cảnh dự án" class="slide2-img"></div>
-              <div class="swiper-slide"><img src="uploads/slides/silde1-al.png" alt="Phối cảnh dự án" class="slide2-img"></div>
-              <div class="swiper-slide"><img src="uploads/slides/silde1-al.png" alt="Phối cảnh dự án" class="slide2-img"></div>
-            </div>
-          </div>
-          <div class="slide2-navigation">
-            <!--            <button class="slide2-arrow slide2-arrow-prev" aria-label="Previous slide">&#8592;</button>-->
-            <button class="slide2-arrow slide2-arrow-next" aria-label="Next slide">&#8594;</button>
-          </div>
-
-
-<!--          <div class="slide2-pagination"></div>-->
-<!--          <div class="swiper mySwiperMobile">-->
+<!--          <div class="swiper-container slide2-swiper">-->
 <!--            <div class="swiper-wrapper">-->
-<!--              <div class="swiper-slide"><img src="uploads/slides/silde1-al.png" alt="Phối cảnh dự án" ></div>-->
-<!--              <div class="swiper-slide"><img src="uploads/slides/silde1-al.png" alt="Phối cảnh dự án" ></div>-->
-<!--              <div class="swiper-slide"><img src="uploads/slides/silde1-al.png" alt="Phối cảnh dự án"></div>-->
-<!--              <div class="swiper-slide"><img src="uploads/slides/silde1-al.png" alt="Phối cảnh dự án"></div>-->
-<!--              <div class="swiper-slide"><img src="uploads/slides/silde1-al.png" alt="Phối cảnh dự án"></div>-->
-<!--              <div class="swiper-slide"><img src="uploads/slides/silde1-al.png" alt="Phối cảnh dự án"></div>-->
+<!--              <div class="swiper-slide"><img src="uploads/slides/silde1-al.png" alt="Phối cảnh dự án" class="slide2-img"></div>-->
+<!--              <div class="swiper-slide"><img src="uploads/slides/silde1-al.png" alt="Phối cảnh dự án" class="slide2-img"></div>-->
+<!--              <div class="swiper-slide"><img src="uploads/slides/silde1-al.png" alt="Phối cảnh dự án" class="slide2-img"></div>-->
+<!--              <div class="swiper-slide"><img src="uploads/slides/silde1-al.png" alt="Phối cảnh dự án" class="slide2-img"></div>-->
+<!--              <div class="swiper-slide"><img src="uploads/slides/silde1-al.png" alt="Phối cảnh dự án" class="slide2-img"></div>-->
 <!--            </div>-->
 <!--          </div>-->
+<!--          <div class="slide2-navigation">-->
+<!--            &lt;!&ndash;            <button class="slide2-arrow slide2-arrow-prev" aria-label="Previous slide">&#8592;</button>&ndash;&gt;-->
+<!--            <button class="slide2-arrow slide2-arrow-next" aria-label="Next slide">&#8594;</button>-->
+<!--          </div>-->
 
-<!--          &lt;!&ndash; Initialize Swiper &ndash;&gt;-->
-<!--          <script>-->
-<!--            var swiper = new Swiper(".mySwiperMobile", {-->
-<!--              effect: "cards",-->
-<!--              grabCursor: true,-->
-<!--            });-->
-<!--          </script>-->
+
+          <div class="swiper mySwiperMobile">
+            <div class="swiper-wrapper">
+<!--              <div class="swiper-slide"><img src="assets/images/bosuutap/slide1.png" style="width: 100%; object-fit: cover;" alt="Phối cảnh dự án" ></div>-->
+<!--              <div class="swiper-slide"><img src="assets/images/bosuutap/slide2.png" alt="Phối cảnh dự án" ></div>-->
+<!--              <div class="swiper-slide"><img src="assets/images/bosuutap/slide3.png" alt="Phối cảnh dự án" ></div>-->
+              <div class="swiper-slide"><img src="uploads/slides/silde1-al.png" alt="Phối cảnh dự án"></div>
+              <div class="swiper-slide"><img src="uploads/slides/silde1-al.png" alt="Phối cảnh dự án"></div>
+              <div class="swiper-slide"><img src="uploads/slides/silde1-al.png" alt="Phối cảnh dự án"></div>
+              <div class="swiper-slide"><img src="uploads/slides/silde1-al.png" alt="Phối cảnh dự án"></div>
+              <div class="swiper-slide"><img src="uploads/slides/silde1-al.png" alt="Phối cảnh dự án"></div>
+            </div>
+          </div>
+
+          <!-- Initialize Swiper -->
+          <script>
+            var swiper = new Swiper(".mySwiperMobile", {
+              effect: "coverflow",
+              grabCursor: true,
+              centeredSlides: true,
+              slidesPerView: "auto",
+              coverflowEffect: {
+                rotate:60,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+              },
+              pagination: {
+                el: ".swiper-pagination",
+              },
+            });
+          </script>
         </div>
 
       </div>
@@ -281,7 +282,7 @@
 
   <div class="section tamdiem-section" id="matbangduan">
     <div class="image-tamdiem-mobile">
-      <img src="assets/images/tamdiem.png" alt="">
+      <img src="assets/images/tamdiem.png" alt="tam diem">
     </div>
     <div class="custom-bg-section">
       <div class="custom-bg-overlay">
@@ -299,6 +300,9 @@
   </div>
 
   <div class="section tongquan-dudan" id="tongquandudan">
+    <div class="image-tongquandudan">
+      <img src="assets/images/map-tong-quan-duan.png" alt="tong quan du an">
+    </div>
   </div>
 
   <div class="section container-section-loi-the" id="6loithe">
@@ -485,136 +489,98 @@
     <div class="album-duan-gallery-container">
       <h1 class="album-duan-gallery-title">THƯ VIỆN ẢNH</h1>
 
-      <div class="swiper mySwiper swiper-album">
+      <div class="swiper mySwiperAlbum">
         <div class="swiper-wrapper">
-          <!-- Slide 1 -->
           <div class="swiper-slide">
-            <div class="album-duan-photo-item">
-              <img src="uploads/thanglongland/album-1.png" alt="Khu đô thị hiện đại">
-              <div class="album-duan-photo-overlay">
-                <div class="album-duan-photo-title">Khu đô thị hiện đại</div>
-              </div>
-            </div>
-            <div class="album-duan-photo-item">
-              <img src="uploads/thanglongland/album-2.png" alt="Trung tâm thương mại">
-              <div class="album-duan-photo-overlay">
-                <div class="album-duan-photo-title">Trung tâm thương mại</div>
-              </div>
-            </div>
-            <div class="album-duan-photo-item">
-              <img src="uploads/thanglongland/album-3.png" alt="Khu nghỉ dưỡng">
-              <div class="album-duan-photo-overlay">
-                <div class="album-duan-photo-title">Khu nghỉ dưỡng</div>
-              </div>
-            </div>
-            <div class="album-duan-photo-item">
-              <img src="uploads/thanglongland/album-4.png" alt="Chợ đêm sôi động">
-              <div class="album-duan-photo-overlay">
-                <div class="album-duan-photo-title">Chợ đêm sôi động</div>
-              </div>
-            </div>
-            <div class="album-duan-photo-item">
-              <img src="uploads/thanglongland/album-5.png" alt="Khu vui chơi giải trí">
-              <div class="album-duan-photo-overlay">
-                <div class="album-duan-photo-title">Khu vui chơi giải trí</div>
-              </div>
-            </div>
-            <div class="album-duan-photo-item">
-              <img src="uploads/thanglongland/album-2.png" alt="Resort biển">
-              <div class="album-duan-photo-overlay">
-                <div class="album-duan-photo-title">Resort biển</div>
-              </div>
-            </div>
+            <img src="uploads/thanglongland/album-1.png" alt="Nhà phố cao cấp">
           </div>
-
-          <!-- Slide 2 -->
           <div class="swiper-slide">
-            <div class="album-duan-photo-item">
-              <img src="uploads/thanglongland/album-2.png" alt="Nhà phố cao cấp">
-              <div class="album-duan-photo-overlay">
-                <div class="album-duan-photo-title">Nhà phố cao cấp</div>
-              </div>
-            </div>
-            <div class="album-duan-photo-item">
-              <img  src="uploads/thanglongland/album-5.png" alt="Khu công viên">
-              <div class="album-duan-photo-overlay">
-                <div class="album-duan-photo-title">Khu công viên</div>
-              </div>
-            </div>
-            <div class="album-duan-photo-item">
-              <img  src="uploads/thanglongland/album-3.png"  alt="Biệt thự vườn">
-              <div class="album-duan-photo-overlay">
-                <div class="album-duan-photo-title">Biệt thự vườn</div>
-              </div>
-            </div>
-            <div class="album-duan-photo-item">
-              <img  src="uploads/thanglongland/album-3.png"  alt="Khách sạn sang trọng">
-              <div class="album-duan-photo-overlay">
-                <div class="album-duan-photo-title">Khách sạn sang trọng</div>
-              </div>
-            </div>
-            <div class="album-duan-photo-item">
-              <img  src="uploads/thanglongland/album-1.png"  alt="Quảng trường trung tâm">
-              <div class="album-duan-photo-overlay">
-                <div class="album-duan-photo-title">Quảng trường trung tâm</div>
-              </div>
-            </div>
-            <div class="album-duan-photo-item">
-              <img  src="uploads/thanglongland/album-1.png"  alt="Thiên nhiên xanh mát">
-              <div class="album-duan-photo-overlay">
-                <div class="album-duan-photo-title">Thiên nhiên xanh mát</div>
-              </div>
-            </div>
+            <img src="uploads/thanglongland/album-2.png" alt="Nhà phố cao cấp">
+          </div>
+          <div class="swiper-slide">
+            <img src="uploads/thanglongland/album-3.png" alt="Nhà phố cao cấp">
+          </div>
+          <div class="swiper-slide">
+            <img src="uploads/thanglongland/album-4.png" alt="Nhà phố cao cấp">
+          </div>
+          <div class="swiper-slide">
+            <img src="uploads/thanglongland/album-5.png" alt="Nhà phố cao cấp">
+          </div>
+          <div class="swiper-slide">
+            <img src="uploads/thanglongland/album-7.png" alt="Nhà phố cao cấp">
+          </div>
+          <div class="swiper-slide">
+            <img src="uploads/thanglongland/album-5.png" alt="Nhà phố cao cấp">
+          </div>
+          <div class="swiper-slide">
+            <img src="uploads/thanglongland/album-2.png" alt="Nhà phố cao cấp">
+          </div>
+          <div class="swiper-slide">
+            <img src="uploads/thanglongland/album-3.png" alt="Nhà phố cao cấp">
+          </div>
+          <div class="swiper-slide">
+            <img src="uploads/thanglongland/album-5.png" alt="Nhà phố cao cấp">
           </div>
         </div>
+
         <div class="swiper-pagination"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
       </div>
+
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
     <script>
-      // Initialize Swiper
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        autoplay: {
-          delay: 4000,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        effect: "slide",
-        speed: 800,
-        grabCursor: true,
-      });
-
-      // Add click event to photos for zoom effect
-      document.querySelectorAll('.album-duan-photo-item').forEach(item => {
-        item.addEventListener('click', function() {
-          this.style.transform = this.style.transform === 'scale(1.1)' ? 'scale(1)' : 'scale(1.1)';
-          setTimeout(() => {
-            this.style.transform = 'scale(1)';
-          }, 500);
-        });
-      });
-
-      // Pause autoplay on hover
-      const swiperContainer = document.querySelector('.swiper');
-      swiperContainer.addEventListener('mouseenter', () => {
-        swiper.autoplay.stop();
-      });
-
-      swiperContainer.addEventListener('mouseleave', () => {
-        swiper.autoplay.start();
+      document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+          // Initialize Swiper
+          var swiper1 = new Swiper(".mySwiperAlbum", {
+            slidesPerView: 3,
+            grid: {
+              rows: 2,
+              fill: 'row',
+            },
+            spaceBetween: 30,
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+            // Responsive breakpoints
+            breakpoints: {
+              // when window width is >= 320px
+              320: {
+                slidesPerView: 1,
+                grid: {
+                  rows: 2,
+                  fill: 'row',
+                },
+                spaceBetween: 10
+              },
+              // when window width is >= 768px
+              768: {
+                slidesPerView: 2,
+                grid: {
+                  rows: 2,
+                  fill: 'row',
+                },
+                spaceBetween: 20
+              },
+              // when window width is >= 1024px
+              1024: {
+                slidesPerView: 3,
+                grid: {
+                  rows: 2,
+                  fill: 'row',
+                },
+                spaceBetween: 30
+              }
+            }
+          });
+        }, 100); // Small delay to ensure everything is ready
       });
     </script>
   </div>
@@ -663,9 +629,6 @@
           </div>
           <div class="news-content">
             <h3 class="news-title">The Right Solution to Build a Sturdy Type 45 House</h3>
-            <!--            <p class="news-excerpt">-->
-            <!--              Urban development trends and smart city solutions for modern living spaces...-->
-            <!--            </p>-->
           </div>
         </article>
 
@@ -678,9 +641,6 @@
           </div>
           <div class="news-content">
             <h3 class="news-title">The Right Solution to Build a Sturdy Type 45 House</h3>
-            <!--            <p class="news-excerpt">-->
-            <!--              Innovative approaches to commercial and residential development projects...-->
-            <!--            </p>-->
           </div>
         </article>
 
@@ -692,9 +652,6 @@
           </div>
           <div class="news-content">
             <h3 class="news-title">The Right Solution to Build a Sturdy Type 45 House</h3>
-            <!--            <p class="news-excerpt">-->
-            <!--              Community-focused housing developments with modern amenities and green spaces...-->
-            <!--            </p>-->
           </div>
         </article>
       </div>
@@ -756,8 +713,7 @@
 
       <div class="footer-center">
         <div class="center-title">
-          CÔNG TY CỔ PHẦN BẤT ĐỘNG SẢN<br>
-          MAX THĂNG LONG
+          CÔNG TY CỔ PHẦN BẤT ĐỘNG SẢN MAX THĂNG LONG
         </div>
 
         <div class="contact-info-footer">
@@ -835,31 +791,6 @@
 <noscript id="normal-styles">
   <link href="assets/css/popup.css" rel="stylesheet" type="text/css"/>
 </noscript>
-<div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
-  <div class="pswp__bg"></div>
-  <div class="pswp__scroll-wrap">
-    <div class="pswp__container">
-      <div class="pswp__item"></div>
-      <div class="pswp__item"></div>
-      <div class="pswp__item"></div>
-    </div>
-    <div class="pswp__ui pswp__ui--hidden">
-      <div class="pswp__top-bar">
-        <div class="pswp__counter"></div>
-        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-        <div class="pswp__preloader">
-          <div class="pswp__preloader__icn">
-            <div class="pswp__preloader__cut">
-              <div class="pswp__preloader__donut"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 <!-- Thư viện fullPage.js -->
 
 <script>

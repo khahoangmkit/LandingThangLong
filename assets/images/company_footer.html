@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max Thăng Long Footer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #3B2F87 0%, #4A3B9A 100%);
+            color: white;
+            padding: 60px 40px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .footer-left {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .logo-placeholder {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px dashed rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .company-name {
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 1.4;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-center {
+            text-align: center;
+        }
+
+        .center-title {
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .icon-placeholder {
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px dashed rgba(255, 255, 255, 0.3);
+            border-radius: 4px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .footer-right {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .social-title {
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px dashed rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-size: 10px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .social-icon:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
+            
+            .footer {
+                padding: 40px 20px;
+            }
+            
+            .contact-item {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="logo-placeholder">LOGO</div>
+                <div class="company-name">
+                    ĐƠN VỊ TƯ VẤN &<br>
+                    PHÁT TRIỂN DỰ ÁN
+                </div>
+            </div>
+
+            <div class="footer-center">
+                <div class="center-title">
+                    CÔNG TY CỔ PHẦN BẤT ĐỘNG SẢN<br>
+                    MAX THĂNG LONG
+                </div>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="icon-placeholder">📍</div>
+                        <div>Tầng 15, tòa nhà 319 BQP, số 63 Lê Văn Lương,<br>Trung Hòa, Cầu Giấy, Hà Nội</div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="icon-placeholder">📞</div>
+                        <div>1900 1545 / 024 397 55555</div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="icon-placeholder">✉️</div>
+                        <div>maxthanglong1809@gmail.com</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <div class="social-title">MẠNG XÃ HỘI</div>
+                <div class="social-icons">
+                    <div class="social-icon">FB</div>
+                    <div class="social-icon">TT</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
