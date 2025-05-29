@@ -169,22 +169,22 @@
               </div>
 
             </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-next" style="width: 40px;">
+            <div class="swiper-pagination swiper-pagination-tongquan" id="swiper-pagination-thongtintongquan"></div>
+            <div class="swiper-button-next swiper-button-next-tongquan" id="button-next-thongtintongquan" style="width: 40px;">
               <img src="assets/images/arrow-down.svg" alt="arrow-right" width="40">
             </div>
-            <div class="swiper-button-prev"  style="width: 40px;">
+            <div class="swiper-button-prev swiper-button-prev-tongquan" id="button-prev-thongtintongquan"   style="width: 40px;">
               <img src="assets/images/arrow-down.svg" alt="arrow-left" width="40">
             </div>
           </div>
 
           <!-- Initialize Swiper -->
           <script>
-            var swiper = new Swiper(".mySwiperMobile", {
+            var swiperTongQuan = new Swiper(".mySwiperMobile", {
               effect: "coverflow",
               grabCursor: true,
               centeredSlides: true,
-              slidesPerView: "auto",
+              slidesPerView: 1.8,
               coverflowEffect: {
                 rotate:60,
                 stretch: 0,
@@ -193,11 +193,11 @@
                 slideShadows: true,
               },
               navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
+                nextEl: "#button-next-thongtintongquan",
+                prevEl: "#button-prev-thongtintongquan",
               },
               pagination: {
-                el: ".swiper-pagination",
+                el: "#swiper-pagination-thongtintongquan",
               },
             });
           </script>
@@ -517,18 +517,18 @@
           </div>
         </div>
 
-        <div class="swiper-pagination"></div>
+        <div class="swiper-pagination swiper-pagination-album" id="swiper-pagination-thuvienanh"></div>
       </div>
 
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next swiper-button-next-album" id="button-next-thuvienanh"></div>
+      <div class="swiper-button-prev swiper-button-prev-album" id="button-prev-thuvienanh"></div>
     </div>
 
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         setTimeout(function() {
           // Initialize Swiper
-          var swiper1 = new Swiper(".mySwiperAlbum", {
+          var swiperAlbum = new Swiper(".mySwiperAlbum", {
             slidesPerView: 3,
             grid: {
               rows: 2,
@@ -536,12 +536,12 @@
             },
             spaceBetween: 30,
             pagination: {
-              el: ".swiper-pagination",
+              el: "#swiper-pagination-thuvienanh",
               clickable: true,
             },
             navigation: {
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
+              nextEl: '#button-next-thuvienanh',
+              prevEl: '#button-prev-thuvienanh',
             },
             // Responsive breakpoints
             breakpoints: {
@@ -721,21 +721,24 @@
           </div>
 
         </div>
+        <div class="swiper-pagination swiper-pagination-news" id="swiper-pagination-tintuc"></div>
+        <div class="swiper-button-next swiper-button-next-news" id="button-next-tintuc"></div>
+        <div class="swiper-button-prev swiper-button-prev-news" id="button-prev-tintuc"></div>
       </div>
 
       <!-- Initialize Swiper -->
       <script>
-        var swiper = new Swiper(".mySwiperNewsMobile", {
+        var swiperNews = new Swiper(".mySwiperNewsMobile", {
           grabCursor: true,
           spaceBetween: 20, // Sửa từ 'gap' thành 'spaceBetween'
           centeredSlides: true,
           slidesPerView: "auto",
           navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: "#button-next-tintuc",
+            prevEl: "#button-prev-tintuc",
           },
           pagination: {
-            el: ".swiper-pagination",
+            el: "#swiper-pagination-tintuc",
           },
         });
       </script>
