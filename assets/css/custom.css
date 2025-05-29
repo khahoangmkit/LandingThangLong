@@ -2508,7 +2508,6 @@ Slide2
 .custom-bg-col {
   flex: 1;
   font-size: 16px;
-  max-width: 450px;
   border-radius: 12px;
   padding: 24px 0;
 }
