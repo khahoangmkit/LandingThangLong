@@ -257,10 +257,7 @@ FOOTER
 .footer {
     background-image: url(../images/background-img1.png);
     color: white;
-    min-height: 490px!important;
-    padding: 60px 40px;
-    height: 490px!important;
-    max-height: 490px!important;
+    padding: 60px 40px 20px 40px;
     font-family: "Montserrat", sans-serif;
 }
 
