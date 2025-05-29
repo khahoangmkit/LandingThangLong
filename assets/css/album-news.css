@@ -18,7 +18,7 @@
 .album-duan-gallery-title {
     font-family: "Montserrat", sans-serif;
     text-align: center;
-    background: -webkit-linear-gradient(top left, #ECD28B 0%, #86774F 100%);
+    background: -webkit-linear-gradient(#ECD28B, #af9b68);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 64px;
