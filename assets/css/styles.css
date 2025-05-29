@@ -503,7 +503,7 @@ h5 {
 }
 
     .pic img {
-        width: 100%;
+        width: 90%;
         height: auto;
     }
 
@@ -1164,7 +1164,7 @@ html[lang="en"] a.en {
     width: 620px!important;
     height: auto!important;
     position: absolute;
-    top: 210px;
+    top: 180px;
     right: 60px;
 }
 @media screen and (max-width: 1023px) {
@@ -1715,44 +1715,6 @@ html[lang="en"] a.en {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
-}
-
-.article-pic,
-.act-item .pic,
-.showcase-item .pic,
-.pic-parkzone-natural,
-.parkzone-service-left .pic,
-.parkzone-service-right .pic,
-.valley-life-pic .pic,
-.valley-pic .pic {
-    overflow: hidden;
-}
-
-    .act-item img,
-    .article-pic img,
-    .pic-parkzone-natural img,
-    .parkzone-service-left .pic img,
-    .parkzone-service-right .pic img,
-    .valley-life-pic .pic img,
-    .valley-pic .pic img {
-        -webkit-transition: transform 0.7s linear;
-        transition: transform 0.7s linear;
-    }
-
-    .act-item:hover img,
-    .article:hover img,
-    .pic-parkzone-natural:hover img,
-    .parkzone-service-left .pic:hover img,
-    .parkzone-service-right .pic:hover img,
-    .valley-life-pic .pic:hover img,
-    .valley-pic .pic:hover img {
-        -webkit-transform: scale(1.2);
-        transform: scale(1.2);
-    }
-
-
-.thanhxuan .but {
-    justify-content: space-between;
 }
 
 
