@@ -2605,6 +2605,13 @@ Slide2
   letter-spacing: 1px;
 }
 
+
+@media screen and (max-width: 480px) {
+  .header-loi-the .title {
+    font-size: 24px;
+  }
+}
+
 .accordion-item {
   margin-bottom: 15px;
   border: 2px solid rgba(255, 215, 0, 0.3);
@@ -2810,6 +2817,13 @@ Slide2
 
   .map-container img {
     border-radius: 4px;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .custom-bg-title {
+    font-size: 24px;
   }
 }
 

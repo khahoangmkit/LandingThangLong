@@ -503,7 +503,7 @@ h5 {
 }
 
     .pic img {
-        width: 90%;
+        width: 80%;
         height: auto;
     }
 
@@ -693,6 +693,25 @@ header.fixed {
     top: 20px;
     width: 360px;
     height: auto;
+}
+
+@media (max-width: 480px) {
+    .logo {
+        position: absolute;
+        top: 25px;
+        right: -40px;
+        width: unset;
+        height: auto;
+    }
+
+    .fixed .logo {
+        right: unset;
+        width: 360px;
+        height: auto;
+    }
+    .image-slogan img {
+        top: 60px!important;
+    }
 }
 
 .logo-pic {
