@@ -148,8 +148,8 @@ app.post("/Contact/SubmitForm", upload.none(), async (req, res) => {
     // Configure email options
     const mailOptions = {
       from: 'Landing Page Thăng Long <hocde99@gmail.com>',
-      to: 'khahoangmkit@gmail.com',
-      subject: 'Thông tin liên hệ mới từ Landing Page',
+      to: 'maxthanglong1809@gmail.com',
+      subject: 'Thông tin khách hàng từ Page Topaz City Core',
       text: `Tên: ${fullName}\nSố điện thoại: ${phone || "Không cung cấp"}\nEmail: ${email || "Không cung cấp"}\nLời nhắn: ${message || "Không có lời nhắn"}\nThời gian: ${timestamp}`,
       html: emailTemplate
     };
@@ -178,7 +178,7 @@ app.get("/health", (req, res) => {
 });
 
 // Start server
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 9999;
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
   console.log(`Health check available at http://localhost:${PORT}/health`);
