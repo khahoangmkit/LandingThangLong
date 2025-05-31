@@ -699,8 +699,6 @@ header.fixed {
     .logo {
         position: absolute;
         top: 25px;
-        right: -40px;
-        width: unset;
         height: auto;
     }
 
@@ -1183,7 +1181,7 @@ html[lang="en"] a.en {
     width: 620px!important;
     height: auto!important;
     position: absolute;
-    top: 180px;
+    top: 12%;
     right: 60px;
 }
 @media screen and (max-width: 1023px) {
