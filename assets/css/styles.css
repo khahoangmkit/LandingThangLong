@@ -1178,11 +1178,11 @@ html[lang="en"] a.en {
     overflow: hidden;
 }
 .image-slogan img{
-    width: 620px!important;
+    width: 30% !important;
     height: auto!important;
     position: absolute;
     top: 12%;
-    right: 60px;
+    right: 8%;
 }
 @media screen and (max-width: 1023px) {
     .image-slogan img{
