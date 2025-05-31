@@ -1596,6 +1596,14 @@ uncomment this part if you haven't added this code anywhere else
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@media (max-width: 480px) {
+  .slide2-container .slide2-left .slide2-title {
+    font-size: 24px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
 
 .slide2-container .slide2-left .slide2-desc {
   font-family: "Montserrat", sans-serif;
