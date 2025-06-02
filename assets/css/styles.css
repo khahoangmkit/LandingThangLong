@@ -5518,7 +5518,7 @@ body[data-page="thanh-xuan-valley"] .container {
 
     /*Common*/
     .pc {
-        display: none;
+        display: none!important;
     }
 
     p, span {
