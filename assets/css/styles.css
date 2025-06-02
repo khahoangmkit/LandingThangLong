@@ -5373,7 +5373,7 @@ body[data-page="thanh-xuan-valley"] .container {
 
     /*Common*/
     .sp {
-        display: none;
+        display: none!important;
     }
 
 
