@@ -503,7 +503,7 @@ h5 {
 }
 
     .pic img {
-        width: 80%;
+        width: 100%;
         height: auto;
     }
 
@@ -699,6 +699,7 @@ header.fixed {
     .logo {
         position: absolute;
         top: 25px;
+        width: 320px;
         height: auto;
     }
 
