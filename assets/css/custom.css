@@ -2525,6 +2525,11 @@ Slide2
   font-size: 1.5rem;
   color: #ffd700;
 }
+@media (min-width: 1024px) {
+  .tam-diem-pc {
+    padding-bottom: 200px;
+  }
+}
 
 @media (max-width: 800px) {
   .custom-bg-content {
