@@ -646,6 +646,7 @@ News
     }
     .footer-center .center-title {
         text-align: center;
+        height: unset;
     }
     .contact-info-footer {
         align-items: center;
