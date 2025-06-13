@@ -647,6 +647,7 @@ News
     .footer-center .center-title {
         text-align: center;
         height: unset;
+        font-size: 21px;
     }
     .contact-info-footer {
         align-items: center;
