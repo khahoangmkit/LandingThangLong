@@ -618,31 +618,95 @@
     <div class="container-news">
       <h1 class="page-title">TIN TỨC</h1>
 
-      <div class="news-grid">
-        <!-- Tin tức chính (featured) -->
-        <article class="news-item featured">
-          <div class="news-image">
-            <div class="image-placeholder">
-              <img src="uploads/thanglongland/tin-tuc-bgi.webp" alt="sd">
+      <div class="news-swiper-container">
+        <div class="swiper-wrapper">
+          <!-- Tin tức chính (featured) -->
+          <article class="swiper-slide news-item featured">
+            <div class="news-image">
+              <div class="image-placeholder">
+                <img src="uploads/thanglongland/tin-tuc-bgi.webp" alt="BGI Group và Max Thăng Long">
+              </div>
             </div>
-          </div>
-          <div class="news-content">
-            <h2 class="news-title">
-              <a href="https://dantri.com.vn/bat-dong-san/bgi-group-va-max-thang-long-ky-ket-hop-tac-chien-luoc-phat-trien-bat-dong-san-20250611113824013.htm"
-                target="_blank"
-              >
-                BGI Group và Max Thăng Long ký kết hợp tác chiến lược phát triển bất động sản
-              </a>
+            <div class="news-content">
+              <h2 class="news-title">
+                <a href="https://dantri.com.vn/bat-dong-san/bgi-group-va-max-thang-long-ky-ket-hop-tac-chien-luoc-phat-trien-bat-dong-san-20250611113824013.htm"
+                  target="_blank"
+                >
+                  BGI Group và Max Thăng Long ký kết hợp tác chiến lược phát triển bất động sản
+                </a>
+                </h2>
+              <p class="news-excerpt">
+                Đại diện BGI Homes - BGI Group và Công ty Cổ phần Bất động sản Max Thăng Long đã ký kết hợp tác chiến lược phát triển loạt dự án bất động sản, trong đó có dự án Topaz Downtown tại thành phố Huế...
+              </p>
+            </div>
+          </article>
+
+          <article class="swiper-slide news-item featured">
+            <div class="news-image">
+              <div class="image-placeholder">
+                <img src="uploads/thanglongland/hue-news.webp" alt="Huế lên thành phố trực thuộc Trung ương">
+              </div>
+            </div>
+            <div class="news-content">
+              <h2 class="news-title">
+                <a href="https://baoxaydung.vn/hue-len-thanh-pho-truc-thuoc-trung-uong-cu-hich-cho-thi-truong-bat-dong-san-19225061819355023.htm"
+                   target="_blank"
+                >
+                  Huế lên thành phố trực thuộc Trung ương: Cú hích cho thị trường bất động sản
+                </a>
               </h2>
-            <p class="news-excerpt">
-              Đại diện BGI Homes - BGI Group và Công ty Cổ phần Bất động sản Max Thăng Long đã ký kết hợp tác chiến lược phát triển loạt dự án bất động sản, trong đó có dự án Topaz Downtown tại thành phố Huế...
-            </p>
-          </div>
-        </article>
+              <p class="news-excerpt">
+                Trở thành thành phố trực thuộc Trung ương, Huế bước vào giai đoạn chuyển mình mạnh mẽ cả về vị thế hành chính lẫn diện mạo đô thị, kéo theo những chuyển động tích cực của thị trường bất động sản.
+              </p>
+            </div>
+          </article>
+        </div>
+        
+        <!-- Thêm điều hướng và phân trang -->
+        <div class="swiper-pagination news-swiper-pagination"></div>
+        <div class="swiper-button-next news-swiper-button-next"></div>
+        <div class="swiper-button-prev news-swiper-button-prev"></div>
       </div>
     </div>
   </div>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() {
+        // Initialize Swiper
+        var swiperNews = new Swiper(".news-swiper-container", {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          pagination: {
+            el: ".news-swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.news-swiper-button-next',
+            prevEl: '.news-swiper-button-prev',
+          },
+          // Responsive breakpoints
+          breakpoints: {
+            // when window width is >= 320px
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 10
+            },
+            // when window width is >= 768px
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 20
+            },
+            // when window width is >= 1024px
+            1024: {
+              slidesPerView: 2,
+              spaceBetween: 30
+            }
+          }
+        });
+      }, 100); // Small delay to ensure everything is ready
+    });
+  </script>
 
   <div class="section" id="contact">
     <div class="container-form-new">
