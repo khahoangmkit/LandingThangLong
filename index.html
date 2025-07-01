@@ -40,29 +40,42 @@
   <script src="ajax/libs/swiper/swiper-bundle.min.js"></script>
   <link rel="stylesheet" href="ajax/libs/swiper/swiper-bundle.min.css"/>
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17191633270"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
+    // Cấu hình Google Ads
+    gtag('config', 'AW-17191633270');
 
-<body class="trang-chu" data-page="trang-chu">
+    // Cấu hình Google Analytics
+    gtag('config', 'G-K1M64GYR1X');
+  </script>
 
-<style>
+  <style>
     .swiper {
-        width: 100%;
-        padding-top: 50px;
-        padding-bottom: 50px;
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
     }
 
     .swiper-slide {
-        background-position: center;
-        background-size: cover;
-        width: 300px;
-        height: 300px;
+      background-position: center;
+      background-size: cover;
+      width: 300px;
+      height: 300px;
     }
 
     .swiper-slide img {
-        display: block;
-        width: 100%;
+      display: block;
+      width: 100%;
     }
-</style>
+  </style>
+</head>
+<body class="trang-chu" data-page="trang-chu">
+
 <header class="header">
   <div class="header-inr">
     <div class="menu-toggle nav__but"></div>
@@ -1048,15 +1061,6 @@
       }
     });
   });
-</script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17191633270"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-17191633270');
 </script>
 </body>
 </html>
