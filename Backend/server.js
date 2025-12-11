@@ -254,7 +254,7 @@ app.post("/mexe/SubmitForm", upload.none(), async (req, res) => {
     const mailOptions = {
       from: 'Landing Page MEXE LAB <hocde99@gmail.com>',
       to: 'khahoangmkit@gmail.com',
-      subject: 'Thông tin liên hệ mới từ Landing Page',
+      subject: 'Khách đặt hàng MEXE LAB',
       text: `Tên: ${fullName}\nSố điện thoại: ${phone || "Không cung cấp"}\nEmail: ${email || "Không cung cấp"}\nLời nhắn: ${message || "Không có lời nhắn"}\nThời gian: ${timestamp}`,
       html: emailTemplate
     };
