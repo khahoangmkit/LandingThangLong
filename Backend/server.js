@@ -82,6 +82,49 @@ async function loadEmailTemplate() {
   }
 }
 
+// Load HTML email template
+async function loadEmailMEXETemplate() {
+  try {
+    const templatePath = join(__dirname, "email-mexe-template.html");
+    return await fs.readFile(templatePath, "utf8");
+  } catch (error) {
+    console.error("Error loading email template:", error);
+    // Return a basic template if file doesn't exist
+    return `
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <style>
+          body { font-family: Arial, sans-serif; line-height: 1.6; }
+          .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+          .header { background-color: #f8f9fa; padding: 20px; text-align: center; }
+          .content { padding: 20px; }
+          .footer { background-color: #f8f9fa; padding: 20px; text-align: center; font-size: 12px; }
+        </style>
+      </head>
+      <body>
+        <div class="container">
+          <div class="header">
+            <h2>Thông Tin Khách Hàng</h2>
+          </div>
+          <div class="content">
+            <p><strong>Họ và Tên:</strong> {{fullName}}</p>
+            <p><strong>Điện thoại:</strong> {{phone}}</p>
+            <p><strong>Email:</strong> {{email}}</p>
+            <p><strong>Sản phẩm quan tâm:</strong> {{product}}</p>
+            <p><strong>Note: </strong> {{message}}</p>
+            <p><strong>Thời gian:</strong> {{timestamp}}</p>
+          </div>
+          <div class="footer">
+            <p>Email này được gửi tự động từ Landing Page của MEXE Lab</p>
+          </div>
+        </div>
+      </body>
+      </html>
+    `;
+  }
+}
+
 // Form validation function
 function validateForm(data) {
   const errors = [];
@@ -168,6 +211,68 @@ app.post("/Contact/SubmitForm", upload.none(), async (req, res) => {
     res.status(500).json({ 
       success: false,
       Message: "Có lỗi xảy ra khi gửi thông tin. Vui lòng thử lại sau." 
+    });
+  }
+});
+
+// Form MEXE submit
+app.post("/mexe/SubmitForm", upload.none(), async (req, res) => {
+  try {
+    console.log("Form submission received:", req.body);
+
+    // Validate form data using field names from HTML form
+    const { fullName, phone, email, product, message } = req.body;
+    const validationErrors = validateForm({ fullName, phone, email, message });
+
+    if (validationErrors.length > 0) {
+      return res.status(400).json({
+        success: false,
+        Message: `Lỗi: ${validationErrors.join(", ")}`
+      });
+    }
+
+    // Load and prepare email template
+    let emailTemplate = await loadEmailMEXETemplate();
+    const timestamp = new Date().toLocaleString('vi-VN', {
+      timeZone: 'Asia/Ho_Chi_Minh',
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit'
+    });
+
+    emailTemplate = emailTemplate
+      .replace("{{fullName}}", fullName)
+      .replace("{{phone}}", phone || "Không cung cấp")
+      .replace("{{email}}", email || "Không cung cấp")
+      .replace("{{product}}", product || "Không cung cấp")
+      .replace("{{message}}", message || "Không có lời nhắn")
+      .replace("{{timestamp}}", timestamp);
+
+    // Configure email options
+    const mailOptions = {
+      from: 'Landing Page MEXE LAB <hocde99@gmail.com>',
+      to: 'khahoangmkit@gmail.com',
+      subject: 'Thông tin liên hệ mới từ Landing Page',
+      text: `Tên: ${fullName}\nSố điện thoại: ${phone || "Không cung cấp"}\nEmail: ${email || "Không cung cấp"}\nLời nhắn: ${message || "Không có lời nhắn"}\nThời gian: ${timestamp}`,
+      html: emailTemplate
+    };
+
+    // Send email
+    await transporter.sendMail(mailOptions);
+    console.log("Email sent successfully");
+
+    // Return success response
+    res.json({
+      success: true,
+      Message: "Gửi thông tin liên hệ thành công! Chúng tôi sẽ liên hệ lại với bạn sớm nhất."
+    });
+  } catch (error) {
+    console.error("Error sending email:", error);
+    res.status(500).json({
+      success: false,
+      Message: "Có lỗi xảy ra khi gửi thông tin. Vui lòng thử lại sau."
     });
   }
 });
