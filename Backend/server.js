@@ -279,7 +279,7 @@ app.post("/mexe/SubmitForm", upload.none(), async (req, res) => {
 
 // Health check endpoint
 app.get("/health", (req, res) => {
-  res.json({ status: "ok", timestamp: new Date().toISOString() });
+  res.json({ status: "pong ok", timestamp: new Date().toISOString() });
 });
 
 // Start server
